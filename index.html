@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Simulateur de dette française</title>
+<meta name="description" content="Trajectoire de la dette publique française jusqu'en 2045 selon 34 leviers politiques chiffrés et expliqués.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,700&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>Simulateur de dette publique française</h1>
+    <p>Chaque secteur est découpé en sous-postes chiffrés : un curseur correspond à une décision politique précise. Le modèle traduit vos choix en solde budgétaire et en croissance, puis calcule la dette jusqu'en 2045. Départ : dette de 115,7 % du PIB fin 2025, solde primaire d'environ −3,1 % du PIB en 2026.</p>
+  </header>
+
+  <div class="panel">
+    <h2>Partir d'un paquet</h2>
+    <div class="presets" id="presets">
+      <button type="button" data-p="sq">Statu quo</button>
+      <button type="button" data-p="dep">Priorité aux économies</button>
+      <button type="button" data-p="rec">Priorité aux recettes</button>
+      <button type="button" data-p="mix">Mix équilibré</button>
+    </div>
+  </div>
+
+  <details class="panel lexique">
+    <summary>Les mots à connaître</summary>
+    <dl class="lex">
+      <div><dt>PIB</dt><dd>Toute la richesse produite en France en un an, environ 3 000 Md€. On exprime la dette et le déficit en % du PIB pour comparer avec les autres pays et dans le temps.</dd></div>
+      <div><dt>Dette publique</dt><dd>Tout ce que l'État, la Sécurité sociale et les collectivités ont emprunté et pas encore remboursé : environ 3 500 Md€, soit 116 % du PIB fin 2025.</dd></div>
+      <div><dt>Déficit</dt><dd>Ce qui manque chaque année : dépenses moins recettes. Il s'ajoute à la dette. Il était de 5,1 % du PIB en 2025.</dd></div>
+      <div><dt>Solde primaire</dt><dd>Le déficit sans compter les intérêts de la dette. C'est la partie que les choix politiques contrôlent directement. Il faut qu'il devienne positif pour stabiliser la dette.</dd></div>
+      <div><dt>1 point de PIB</dt><dd>Environ 30 Md€. Exemple : « un effort de 4 points » = environ 120 Md€ par an.</dd></div>
+      <div><dt>Indexation</dt><dd>Augmenter une prestation ou un salaire au même rythme que les prix. Sous-indexer, c'est l'augmenter moins vite, donc baisser son pouvoir d'achat.</dd></div>
+      <div><dt>« pt/an » sur un curseur</dt><dd>Une dépense qui augmente chaque année d'1 point de moins que prévu, pendant 5 ans. Exemple : +3 % au lieu de +4 %.</dd></div>
+      <div><dt>Multiplicateur</dt><dd>Quand l'État dépense moins ou taxe plus, l'activité ralentit un peu cette année-là. Le multiplicateur mesure cet effet, différent selon les mesures.</dd></div>
+      <div><dt>Montée en charge</dt><dd>La plupart des mesures ne rapportent pas tout la première année. Les montants affichés sont ceux atteints une fois la mesure entièrement appliquée.</dd></div>
+    </dl>
+  </details>
+
+  <div class="grid">
+    <div class="left" id="levers"></div>
+
+    <div class="right">
+      <div class="kpis">
+        <div class="kpi"><div class="lab">Dette en 2030</div><div class="val" id="k30"></div><div class="sub" id="k30s"></div></div>
+        <div class="kpi"><div class="lab">Dette en 2045</div><div class="val" id="k45"></div><div id="ktrend"></div></div>
+        <div class="kpi"><div class="lab">Pic</div><div class="val" id="kpk"></div><div class="sub" id="kpky"></div></div>
+        <div class="kpi"><div class="lab">Intérêts en 2045</div><div class="val" id="kint"></div><div class="sub" id="kints"></div></div>
+      </div>
+
+      <section class="panel" aria-label="Trajectoire">
+        <h2>Dette publique, % du PIB</h2>
+        <div class="chartbox" id="chartbox"><svg id="chart" viewBox="0 0 720 280" role="img" aria-label="Trajectoire de la dette publique"></svg><div id="tip" hidden></div></div>
+        <div class="legend">
+          <span><i class="sw" style="background:var(--accent)"></i>Vos choix</span>
+          <span><i class="sw" style="background:var(--ghost)"></i>Statu quo</span>
+        </div>
+      </section>
+
+      <section class="panel" aria-label="Bilan">
+        <h2>Ce qui fait bouger le solde en 2033, Md€ par an</h2>
+        <div class="bars" id="bars"></div>
+        <div class="total"><span>Solde primaire 2033</span><span class="v" id="pb33"></span></div>
+        <div class="need" id="need"></div>
+      </section>
+
+      <section class="panel" aria-label="Services publics">
+        <h2>État des services publics</h2>
+        <p class="empty" style="margin-bottom:8px">Indicateur construit par l'auteur à partir de seuils approximatifs, sans base officielle : à lire comme une alerte, pas comme une mesure.</p>
+        <div id="quality"></div>
+      </section>
+    </div>
+  </div>
+
+  <div class="notes">
+    <p><strong>Comment c'est calculé.</strong> Le scénario de base part d'un solde primaire de −3,1 % du PIB en 2026, puis se dégrade à politique inchangée : programmation militaire déjà votée, dérive liée au vieillissement, fin de la surtaxe des grands groupes. Chaque curseur a un effet sur le solde à pleine montée (1 point de PIB ≈ 30 Md€), une durée de montée en charge, un multiplicateur de court terme et parfois un effet durable sur le PIB. Quand l'activité ralentit (à cause des mesures ou d'une croissance plus faible), les recettes baissent : le solde réagit pour moitié à l'écart de croissance, avec un effet qui s'estompe progressivement. La dette suit d<sub>t</sub> = d<sub>t−1</sub>(1+i)/(1+g) − s, avec une dette refinancée progressivement au taux de marché (maturité moyenne de 8 ans et 5 mois selon l'Agence France Trésor).</p>
+    <p><strong>Pas de double compte.</strong> Les pensions des fonctionnaires sont dans les Retraites, pas dans la masse salariale de l'État. Les salaires hospitaliers sont dans le levier hôpital. Les indemnités journalières sont sorties des soins de ville. Les niches traitées à part sont sorties du rabot sur les autres niches. Reste un recoupement connu : la masse salariale des collectivités inclut leurs cotisations de retraite.</p>
+    <p><strong>Sources officielles.</strong> Insee, comptes des administrations publiques 2025. Drees, Les retraités et les retraites 2025 et Minima sociaux 2025. Sénat : avis sur la Sécurité sociale (assurance maladie, indemnités journalières), avis Fonction publique 2026 (masse salariale de l'État hors pensions), rapports sur le crédit d'impôt recherche et sur les APL, commission d'enquête sur les aides aux entreprises (allègements de cotisations). Unédic, rapport financier 2025. DG Trésor, rendement d'un point de TVA. Ministère des Armées, budget 2027. Agence France Trésor.</p>
+    <p><strong>Sources secondaires, à remplacer par les annexes budgétaires.</strong> Abattement des retraités, emploi à domicile, heures supplémentaires, épargne salariale (annexes 2025 via Moneyvox), TVA réduites et agences de l'État (Fipeco), surtaxe des grands groupes (Journal du Net), MaPrimeRénov' (MySweetImmo), apprentissage et DGF (Banque des Territoires), successions (Ifrap). Les fiches de chaque curseur l'indiquent.</p>
+    <p><strong>Hypothèses de l'auteur.</strong> Multiplicateurs, semi-élasticité du solde (0,5), dérive liée au vieillissement, effet de l'emploi et de l'investissement sur le PIB, rendement de l'impôt sur les très hauts patrimoines, calibrage du recul de l'âge, indicateurs de services publics. Le modèle ignore la dette indexée sur l'inflation, la réaction des taux au niveau de dette et la faisabilité politique.</p>
+    <p><strong>Point de départ des curseurs.</strong> Ils partent de la politique de 2026. Le budget 2027 en discussion propose déjà certaines mesures (par exemple une sous-indexation des prestations) : les reproduire avec les curseurs revient à les compter une fois, pas deux.</p>
+    <p><strong>Ce qui n'est pas couvert.</strong> Les prestations familiales n'ont pas de curseur, faute d'un montant récent vérifié. Le RSA est inclus dans les minima sociaux. Les nombres de personnes concernées dans les fiches sont des ordres de grandeur arrondis.</p>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
