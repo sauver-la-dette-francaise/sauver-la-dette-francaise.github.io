@@ -54,6 +54,25 @@
     fr_tsba:["Ministère de la Transition écologique et DGAC, Premiers retours sur la hausse de la TSBA de mars 2025 (novembre 2025)","https://www.ecologie.gouv.fr/sites/default/files/documents/etude_impact_TSBA_transport_aerien_france_novembre2025.pdf"],
     ccss_rec:["Commission des comptes de la Sécurité sociale, rapport d'octobre 2026, fiche 1 (recettes), tableau 2","https://www.securite-sociale.fr/la-secu-en-detail/comptes-de-la-securite-sociale/rapports-de-la-commission"],
     insee_act:["Insee, Évolution de la population active (2025)","https://www.insee.fr/fr/statistiques/8733063"],
+    tresor334:["DG Trésor, Taux d'intérêt, croissance et soutenabilité de la dette publique, Trésor-Éco n° 334 (octobre 2023)","https://www.tresor.economie.gouv.fr/Articles/3658fd90-1ddd-492b-884e-56818aa86b2f/files/ac5fd22a-eff1-4cbe-989f-e1f7c75db1ba"],
+    fs_cice:["France Stratégie, Évaluation du CICE : synthèse des travaux d'approfondissement (septembre 2020)","https://www.strategie-plan.gouv.fr/files/files/Presse/CP%202020/2020-09-01_Evaluation%20du%20CICE%20%3B%20France%20Strat%C3%A9gie%20publie%20une%20synth%C3%A8se%20des%20travaux%20d%27approfondissement.pdf"],
+    senat_cice:["Sénat, avis n° 148 (2018-2019), Économie : coût du CICE par année","https://www.senat.fr/rap/a18-148-3/a18-148-34.html"],
+    unedic_eval:["Unédic, Évaluation de la réforme d'assurance chômage 2019-2021 : principaux enseignements (mars 2025)","https://s3.eusc-de-east-1.amazonaws.eu/unedic-eks-prod-cms/2025/04/03/Synthese-Principaux-enseignements-de-l-evaluation_uid_67ee965e4dfb9.pdf"],
+    igf_app:["IGF et IGAS, Revue des dépenses publiques d'apprentissage et de formation professionnelle (mars 2024)","https://igas.gouv.fr/sites/igas/files/2024-09/Rapport%20Igas%20-IGF%20Apprentissage-Formation%20%28revue%20de%20d%C3%A9penses%29.pdf"],
+    rgpp:["IGA, IGF et IGAS, Bilan de la RGPP et conditions de réussite d'une nouvelle politique de réforme de l'État (septembre 2012)","https://www.fonction-publique.gouv.fr/files/files/ArchivePortailFP/www.fonction-publique.gouv.fr/files/files/publications/hors_collections/20120925-rapport-bilan-RGPP_sans-annexes.pdf"],
+    cdc_ecotaxe:["Cour des comptes, rapport public annuel 2017, L'écotaxe poids lourds : un échec stratégique, un abandon coûteux","https://banquedesterritoires.fr/sites/default/files/ra/Le%20chapitre%20du%20rapport%20public%20annuel%20de%20la%20Cour%20des%20Comptes%20sur%20l%27abandon%20de%20l%27%C3%A9cotaxe%20poids%20lourds.pdf"],
+    fs_isf:["France Stratégie, Comité d'évaluation des réformes de la fiscalité du capital, quatrième rapport (octobre 2023)","https://www.strategie.gouv.fr/sites/strategie.gouv.fr/files/atoms/files/fs-2023-rapport-isf-quatrieme_rapport_complet_17octobre_avis.pdf"],
+    cor_2010:["COR, S. Rabaté et J. Rochut, Impact de la réforme des retraites de 2010 sur l'activité des seniors (document n° 11, octobre 2016)","https://www.cor-retraites.fr/sites/default/files/2019-06/doc-3747.pdf"],
+    ca_bourgon:["J. Bourgon (greffière du Conseil privé du Canada de 1994 à 1999), Program Review: The Government of Canada's Experience Eliminating the Deficit, 1994-99 (CIGI, 2009)","https://www.cigionline.org/static/documents/the_government_of_canada_s_experience_eliminating_the_deficit_1994-99.pdf"],
+    se_budget98:["Gouvernement suédois, The Budget Statement 1998 (Prop. 1997/98:150)","https://www.regeringen.se/contentassets/7d86681d640044bdb24c7abb4ee7e545/the-budget-statement/"],
+    se_jonung:["F. Andersson et L. Jonung, The Swedish Fiscal Framework (Commission européenne)","https://commission.europa.eu/document/download/4a2ec503-e468-4f0d-aadf-159ce604be69_en?filename=swedish-fiscal-framework-andersson-jonung_en.pdf&prefLang=de"],
+    ba_hartz:["Bundesagentur für Arbeit, Arbeitslosigkeit im Zeitverlauf (republié par la bpb, 2013)","https://www.bpb.de/system/files/dokument_pdf/04%20Ausgew%C3%A4hlte%20Arbeitslosenquoten%20II.pdf"],
+    iab_hartz:["IAB, Kurzbericht n° 18/2007 sur les effets statistiques de Hartz IV","https://doku.iab.de/kurzber/2007/kb1807.pdf"],
+    de_rente67:["Bundestag, projet de loi RV-Altersgrenzenanpassungsgesetz, Drucksache 16/3794 (décembre 2006)","https://dserver.bundestag.de/btd/16/037/1603794.pdf"],
+    oecd_dk:["OCDE, Ambitious retirement age indexation ensures sustainable public finances in Denmark (janvier 2019)","https://oecdecoscope.blog/2019/01/15/ambitious-retirement-age-indexation-ensures-sustainable-public-finances-in-denmark/"],
+    it_mef:["Ministère italien de l'Économie et des Finances, Rapporto sui risultati conseguiti in materia di contrasto all'evasione (septembre 2020)","https://www.finanze.gov.it/export/sites/finanze/.galleries/Documenti/Varie/Rapporto_evasione_2021_25-Settembre_2020.pdf"],
+    ec_vatgap:["Commission européenne, VAT Gap in Europe, rapport 2025","https://taxation-customs.ec.europa.eu/vat-gap_fr"],
+    upb_superbonus:["Ufficio parlamentare di bilancio (Italie), audition sur le décret-loi 39/2024, Superbonus (avril 2024)","https://www.upbilancio.it/wp-content/uploads/2024/04/Comunicato-Memoria-DL-39.pdf"],
     cor26:["Conseil d'orientation des retraites, rapport annuel de juin 2026 (rapport complet)","https://www.cor-retraites.fr/rapports-du-cor/rapport-annuel-cor-juin-2026-evolutions-perspectives-retraites-france"],
     drees_ase:["Drees, Les Dossiers de la Drees n° 131, L'aide sociale à l'enfance, édition 2025 (juin 2025)","https://onpe.france-enfance-protegee.fr/wp-content/uploads/2025/09/dd-ase-2025_vf.pdf"],
     plfss_a4:["Annexe 4 au projet de loi de financement de la Sécurité sociale pour 2026, réductions et exonérations de cotisations","https://www.assemblee-nationale.fr/dyn/contenu/visualisation/1088679/file/PLFSS2026-Annexe4-20251014-183718-59-11_avec%20couverture-2.pdf"],
@@ -964,7 +983,7 @@
      src:"insee_imp"}
    ]}
   ];
-  const SUP={x_popact:{S:[-0.11,-0.07,-0.04,0.01,0.11],Y:[0.04,0.07,0.10,0.23,0.61]},x_eff:{S:[-0.04,-0.11,-0.09,0.00,0.05],Y:[0.04,0.15,0.27,0.43,0.61]}};
+  const SUP={x_popact:{S:[-0.11,-0.07,-0.04,0.01,0.11],Y:[0.04,0.07,0.10,0.23,0.61],P:[-0.09,-0.24,-0.44,-0.81,-1.12]},x_eff:{S:[-0.04,-0.11,-0.09,0.00,0.05],Y:[0.04,0.15,0.27,0.43,0.61],P:[-0.09,-0.28,-0.44,-0.63,-0.89]}};
   const SPECIAL=[
     {id:"x_popact",kind:"spec",gain:1,path:(t,v)=>{let a=0;for(let s0=1;s0<=Math.min(t,5);s0++)a+=v/5*mesAt(SUP.x_popact.S,t-s0+1);return a},label:"Augmenter la population active",min:0,max:5,step:0.5,start:1,
      sup:SUP.x_popact,
@@ -973,7 +992,7 @@
      help:"Plus de personnes qui travaillent ou cherchent un emploi : emploi des seniors, des femmes et des jeunes, insertion des allocataires, immigration de travail. 1 % de population active = environ 318 000 personnes (31,8 millions d'actifs en 2025). Le curseur suppose que l'objectif est atteint progressivement en 5 ans (2027-2031) ; le choix des réformes pour y arriver vous revient.",
      who:"Les personnes qui entrent ou restent sur le marché du travail ; à court terme, les salariés, car le chômage monte avant que l'économie n'absorbe les nouveaux actifs.",
      per:v=>v===0?"Aucun changement":`PIB plus élevé de ${fr(v*0.61,2)} % au bout de 10 ans ; solde public amélioré de ${fr(v*0.11,2)} point de PIB à 10 ans ; à long terme, environ ${fr(v*262,0)} 000 emplois de plus (DG Trésor)`,
-     up:"Selon la DG Trésor, l'économie met du temps à absorber les nouveaux actifs : le chômage monte d'abord (+0,8 point la 1re année pour 1 %), les salaires ralentissent, puis l'emploi et la production rattrapent. Le gain pour les comptes publics est faible les premières années et ne devient positif qu'après 5 ans. Le modèle montre aussi une baisse des prix, que le simulateur ne compte pas : le gain réel sur la dette, mesurée en euros, serait plus faible que celui affiché.",
+     up:"Selon la DG Trésor, l'économie met du temps à absorber les nouveaux actifs : le chômage monte d'abord (+0,8 point la 1re année pour 1 %), les salaires ralentissent, puis l'emploi et la production rattrapent. Le gain pour les comptes publics est faible les premières années et ne devient positif qu'après 5 ans. Le modèle montre aussi une baisse des prix, comptée par le simulateur (sauf si vous désactivez les effets sur les prix) : elle réduit la valeur en euros du PIB, donc le gain sur la dette.",
      src:"mesange",note:"Variante « hausse permanente de la population active de 1 % » (Cahiers de la DG Trésor n° 2017-04, p. 131) : PIB +0,04 % à 1 an, +0,10 % à 3 ans, +0,23 % à 5 ans, +0,61 % à 10 ans, +0,88 % à long terme ; solde primaire −0,11, −0,04, +0,01 puis +0,11 point de PIB ; +262 000 emplois au total à long terme. Population active : Insee, 31,8 millions en 2025. Pour comparaison, le COR chiffre le recul d'un an de l'âge de départ à +200 000 à +250 000 emplois à 10 ans (curseur à part)."},
     {id:"x_eff",kind:"spec",gain:1,path:(t,v)=>{let a=0;for(let s0=1;s0<=Math.min(t,5);s0++)a+=v/5*mesAt(SUP.x_eff.S,t-s0+1);return a},label:"Gains de productivité (réformes structurelles)",min:0,max:3,step:0.5,start:1,
      sup:SUP.x_eff,
@@ -982,7 +1001,7 @@
      help:"Chaque heure travaillée produit davantage : formation, simplification, concurrence, diffusion des technologies (dont l'intelligence artificielle), meilleure organisation. Aucune administration ne chiffre officiellement le gain d'une réforme précise de ce type : le niveau choisi est une hypothèse de votre part. Le curseur suppose une montée en charge sur 5 ans.",
      who:"Les entreprises et les salariés ; à court terme, certains emplois, car les entreprises produisent autant avec moins de monde avant que la demande ne suive.",
      per:v=>v===0?"Aucun changement":`PIB plus élevé de ${fr(v*0.61,2)} % au bout de 10 ans et de ${fr(v*0.89,2)} % à long terme ; solde public amélioré de ${fr(v*0.05,2)} point de PIB à 10 ans (DG Trésor)`,
-     up:"Selon la DG Trésor, un gain de productivité détruit d'abord des emplois (79 000 au bout de 3 ans pour 1 %), puis la baisse des prix relance la demande et l'emploi revient presque entièrement. Le gain pour les comptes publics est négatif les 3 premières années et faible ensuite. Le modèle montre aussi une baisse des prix (−0,9 % à 10 ans), que le simulateur ne compte pas : le gain réel sur la dette, mesurée en euros, serait plus faible que celui affiché.",
+     up:"Selon la DG Trésor, un gain de productivité détruit d'abord des emplois (79 000 au bout de 3 ans pour 1 %), puis la baisse des prix relance la demande et l'emploi revient presque entièrement. Le gain pour les comptes publics est négatif les 3 premières années et faible ensuite. Le modèle montre aussi une baisse des prix (−0,9 % à 10 ans), comptée par le simulateur (sauf si vous désactivez les effets sur les prix) : elle réduit la valeur en euros du PIB, donc le gain sur la dette.",
      src:"mesange",note:"Variante « hausse permanente de l'efficience de 1 % » (Cahiers de la DG Trésor n° 2017-04, p. 129) : PIB +0,04 % à 1 an, +0,27 % à 3 ans, +0,43 % à 5 ans, +0,61 % à 10 ans, +0,89 % à long terme ; solde primaire −0,04, −0,09, 0,00 puis +0,05 point de PIB."},
     {id:"x_cess",kind:"spec",label:"Vendre des participations cotées de l'État",min:0,max:100,step:10,start:1,
      swFn:v=>-1.9*v/100,
@@ -1059,12 +1078,14 @@
     {id:"inf",label:"Inflation à partir de 2028",min:0,max:4,step:0.1,def:1.8,fmt:v=>fr(v,1)+" %",help:"2026 et 2027 : 2,1 % et 1,8 % (RESF 2027). Ensuite : prolongement de 2027. Hypothèse."},
     {id:"mat",label:"Maturité moyenne de la dette",min:3,max:15,step:0.5,def:8.5,fmt:v=>fr(v,1)+" ans",help:"8 ans et 158 jours au 30 septembre 2026 (Agence France Trésor)."},
     {id:"mes",label:"Effets des mesures sur l'activité",min:0,max:1,step:1,def:1,fmt:v=>v?"Variantes officielles":"Aucun (calcul comptable)",help:"Par défaut, chaque mesure produit l'effet sur la croissance et sur le solde public publié par la DG Trésor (modèle Mésange, 2017) ou le COR (2026) : une baisse de dépense ou une hausse d'impôt freine l'activité, ce qui fait perdre des recettes. Par exemple, 1 point de PIB d'économie sur la dépense n'améliore le solde que de 0,53 point la 1re année et 0,68 point à 10 ans. Ces modèles supposent des taux d'intérêt inchangés : si la baisse du déficit fait baisser les taux, l'effet est meilleur (curseur de taux ci-dessus). Mettez « Aucun » pour voir le calcul purement comptable."},
+    {id:"prix",label:"Effets des mesures sur les prix",min:0,max:1,step:1,def:1,fmt:v=>v?"Comptés":"Ignorés",help:"La dette se mesure en euros : si une mesure fait baisser les prix, la richesse produite vaut moins d'euros et le ratio de dette se dégrade, et inversement. Les variantes de la DG Trésor donnent l'effet de chaque type de mesure sur les prix à la consommation, utilisés ici comme approximation des prix du PIB. Par exemple, 1 point de PIB d'économie sur la dépense publique fait baisser les prix de 0,6 % au bout de 2 ans et de 1,9 % au bout de 10 ans ; une hausse de TVA les fait monter. Ne joue que si les effets sur l'activité sont activés."},
+    {id:"rlink",label:"Taux d'intérêt liés au niveau de la dette",min:0,max:1,step:1,def:1,fmt:v=>v?"Oui":"Non",help:"Quand la dette monte, les prêteurs demandent un taux plus élevé. La DG Trésor estime qu'1 point de PIB de dette en plus relève l'écart entre taux d'intérêt et croissance d'environ 2 points de base l'année suivante (fourchette de la littérature : 1 à 2,5). Le simulateur applique +0,02 point de taux par point de dette au-dessus de son niveau de fin 2025, sur les nouveaux emprunts. Une hausse des taux pèse aussi sur l'activité (variante « taux d'intérêt » du modèle Mésange)."},
     {id:"ms",label:"Effet sur l'activité des autres mesures",min:0,max:1.5,step:0.1,def:0,fmt:v=>fr(v,1),help:"Ne concerne que les mesures pour lesquelles aucune variante officielle n'existe : impôt sur les sociétés, taxe foncière, successions, IFI, tabac, impôt sur la fortune, lutte contre la fraude, niches des entreprises, « autres niches », taxe sur les achats d'actions et prélèvement sur les banques et l'énergie. Croissance perdue l'année où l'on fait 1 point de PIB d'effort ; 0 = calcul purement comptable. Toutes les autres lignes utilisent les variantes publiées par la DG Trésor (modèle Mésange) ou le COR."},
     {id:"dsante",label:"Dérive démographique de la santé et de la dépendance",min:0,max:0.1,step:0.001,def:(0.3+0.7)/48,fmt:v=>fr(v,3)+" pt de PIB par an",help:"Par défaut : hausse de 0,3 point de PIB pour la santé et de 0,7 point pour la dépendance entre 2022 et 2070 (rapport européen sur le vieillissement, cité par la Cour des comptes, décembre 2025, p. 85), répartie également sur la période. La Cour juge ces projections « conservatrices » : son scénario risqué atteint +1,1 point pour la santé, et la dépendance pourrait monter de 0,9 point (p. 78 et 80). Attention : le même rapport cite aussi, p. 78, une hausse de 0,7 point (et non 0,3) pour les dépenses de santé liées au vieillissement entre 2023 et 2070 ; avec ce chiffre, la valeur du curseur serait (0,7+0,7)/48 = 0,029."},
     {id:"deduc",label:"Effet de la baisse du nombre d'élèves",min:-0.05,max:0,step:0.001,def:-0.9/48,fmt:v=>fr(v,3)+" pt de PIB par an",help:"Par défaut : baisse de 0,9 point de PIB des dépenses d'éducation entre 2022 et 2070 à dépense par élève inchangée (même source, p. 80 et 85). Mettez 0 si les budgets de l'école ne suivent pas la baisse du nombre d'élèves."}
   ];
   const G_REAL=[0.5,1.0], G_INF=[2.1,1.8];
-  const D0=115.7, I0=1.96, DEF26=5.4, Y0=2026, YEARS=20, SEMI=0.5, PERSIST=0.8;
+  const RDEF=3.55, D0=115.7, I0=1.96, DEF26=5.4, Y0=2026, YEARS=20, SEMI=0.5, PERSIST=0.8;
   const LPM=[0,6.2,11.2,15.7,19.2]; // Md€ au-dessus de 2026 (57,1) : 63,3 ; 68,3 ; 72,8 ; 76,3
   const SURTAXE=7.3;
 
@@ -1078,9 +1099,9 @@
     return a*v/100;
   };
   const losing=(x,v)=>x.gain?v<0:(x.kind==="rec"||x.kind==="spec")?v>0:v<0;
-  const PRESETS={sq:{},dep:{r_gen:-13.5,r_pub:-13.5,r_compl:-9,r_ns:-4.5,s_spe:-11,s_dent:-5.5,s_inf:-5.5,s_kine:-7,s_forf:-9,s_labo:-11,s_transp:-14.5,s_med:-14.5,s_dm:-11,s_ijm:-15,s_ijat:-15,s_hop:-7,s_fir:-9,f_af:-9,f_paje:-9,f_cmg:-9,f_ars:-9,f_pa:-27,f_ass:-18,e_are:-27,e_app:-30,e_trav:-27,e_apl:-14,d_scol:-13,d_sup:-5,d_rech:-5,g_ext:-18,g_apd:-30,a_ener:-27,a_eco:-27,a_agri:-18,a_cult:-18,a_om:-9,a_sport:-18,a_med:-18,c_rem:-16,c_ci:-18,c_inv:-9,n_cotis:-55,n_exoc:-55,n_exonc:-55,n_cir:-55,n_dom:-55,n_abat:-90,n_hsup:-100,n_autres:-55,ns_cse:-90,ns_rupt:-55,x_ref23:100,x_aod:1},
- rec:{r_gen:-4,r_pub:-4,s_med:-5,s_dm:-5,n_cotis:-35,n_cir:-65,n_dutreil:-100,n_dom:-65,n_abat:-100,n_trav:-80,n_resto:-100,n_hsup:-100,n_ep:-100,n_autres:-80,ns_ep:-80,ns_tr:-80,ns_cse:-80,ns_rupt:-80,t_fraude:50,t_tva:12.5,t_csg:12.5,t_ir:20,t_is:13,t_fonc:16.5,t_ticpe:8.5,t_succ:30,t_tabac:16.5,x_surtaxe:100},
- mix:{r_gen:-10.5,r_pub:-10.5,r_compl:-7,s_spe:-7,s_dent:-3.5,s_inf:-5,s_kine:-5,s_forf:-8.5,s_labo:-8.5,s_transp:-10.5,s_med:-12,s_dm:-8.5,s_ijm:-15,s_ijat:-8.5,s_hop:-5,f_af:-5,f_cmg:-5,f_pa:-17,e_are:-17,e_app:-30,e_trav:-17,e_apl:-9,d_scol:-3,g_apd:-30,a_ener:-26,a_eco:-17,c_rem:-9,c_ci:-12,n_cotis:-35,n_exoc:-35,n_cir:-50,n_dutreil:-85,n_dom:-50,n_abat:-85,n_hsup:-100,n_ep:-85,n_autres:-50,ns_ep:-85,ns_tr:-85,ns_cse:-85,t_fraude:35,t_csg:7,t_ir:14,t_is:9,t_succ:30,x_ref23:100,x_aod:1,x_surtaxe:100}
+  const PRESETS={sq:{},dep:{r_gen:-15,r_pub:-15,r_compl:-10.5,r_ns:-5,s_spe:-12.5,s_dent:-6.5,s_inf:-6.5,s_kine:-8,s_forf:-10.5,s_labo:-12.5,s_transp:-15,s_med:-15,s_dm:-12.5,s_ijm:-15,s_ijat:-15,s_hop:-8,s_fir:-10.5,f_af:-10,f_paje:-10,f_cmg:-10,f_ars:-10,f_pa:-30,f_ass:-21,e_are:-30,e_app:-30,e_trav:-30,e_apl:-16,d_scol:-15,d_sup:-6,d_rech:-6,g_ext:-21,g_apd:-30,a_ener:-31,a_eco:-31,a_agri:-21,a_cult:-21,a_om:-10,a_sport:-21,a_med:-21,c_rem:-18,c_ci:-20,c_inv:-10,n_cotis:-65,n_exoc:-65,n_exonc:-65,n_cir:-65,n_dom:-65,n_abat:-100,n_hsup:-100,n_autres:-65,ns_cse:-100,ns_rupt:-65,x_ref23:100,x_aod:1},
+ rec:{r_gen:-4,r_pub:-4,s_med:-5,s_dm:-5,n_cotis:-35,n_cir:-65,n_dutreil:-100,n_dom:-65,n_abat:-100,n_trav:-80,n_resto:-100,n_hsup:-100,n_ep:-100,n_autres:-80,ns_ep:-80,ns_tr:-80,ns_cse:-80,ns_rupt:-80,t_fraude:50,t_tva:13,t_csg:13,t_ir:20.5,t_is:13.5,t_fonc:17,t_ticpe:8.5,t_succ:30,t_tabac:17,x_surtaxe:100},
+ mix:{r_gen:-11.5,r_pub:-11.5,r_compl:-7.5,s_spe:-7.5,s_dent:-4,s_inf:-5.5,s_kine:-5.5,s_forf:-9,s_labo:-9,s_transp:-11.5,s_med:-13,s_dm:-9,s_ijm:-15,s_ijat:-9,s_hop:-5.5,f_af:-5,f_cmg:-5,f_pa:-18,e_are:-18,e_app:-30,e_trav:-18,e_apl:-10,d_scol:-3,g_apd:-30,a_ener:-28,a_eco:-18,c_rem:-10,c_ci:-13,n_cotis:-40,n_exoc:-40,n_cir:-55,n_dutreil:-90,n_dom:-55,n_abat:-90,n_hsup:-100,n_ep:-90,n_autres:-55,ns_ep:-90,ns_tr:-90,ns_cse:-90,t_fraude:40,t_csg:7.5,t_ir:15,t_is:9.5,t_succ:30,x_ref23:100,x_aod:1,x_surtaxe:100}
   };
 
   // ---------- Construction ----------
@@ -1161,14 +1182,15 @@
   // S = amélioration effective du solde primaire (en points de PIB, effets sur l'activité compris), Y = écart de PIB en volume (%).
   // Source : DG Trésor, Cahiers n° 2017-04, variantes du modèle Mésange (p. 102 à 120) ; pensions : COR, rapport annuel 2026, p. 20.
   const MES={
-    dep:{l:"dépense publique (Mésange, p. 105)",S:[0.53,0.32,0.35,0.54,0.68],Y:[-0.78,-1.06,-1.03,-0.86,-0.53]},
-    inv:{l:"investissement public (Mésange, p. 102)",S:[0.49,0.26,0.40,0.70,0.82],Y:[-1.31,-1.38,-1.22,-0.93,-0.57]},
-    cotp:{l:"cotisations employeurs (Mésange, p. 107)",S:[0.72,0.42,0.27,0.24,0.17],Y:[-0.20,-0.55,-0.76,-0.97,-1.29]},
-    tva:{l:"TVA (Mésange, p. 112)",S:[0.80,0.36,0.28,0.37,0.44],Y:[-0.32,-0.66,-0.72,-0.81,-0.78]},
-    csg:{l:"CSG (Mésange, p. 115)",S:[0.81,0.50,0.43,0.52,0.54],Y:[-0.41,-0.84,-0.90,-0.81,-0.80]},
-    ir:{l:"impôt sur le revenu (Mésange, p. 117)",S:[0.81,0.50,0.42,0.51,0.50],Y:[-0.41,-0.83,-0.88,-0.81,-0.87]},
-    carb:{l:"fiscalité de l'énergie (Mésange, variante taxe carbone, p. 120)",S:[0.68,0.15,0.14,0.24,0.28],Y:[-0.51,-0.80,-0.75,-0.87,-0.86]},
-    pens:{l:"pensions (COR 2026, p. 20)",S:[0.5,0.5,0.5,0.5,0.5],Y:[-0.75,-0.75,-0.75,-0.75,-0.75]}
+    dep:{l:"dépense publique (Mésange, p. 105)",S:[0.53,0.32,0.35,0.54,0.68],Y:[-0.78,-1.06,-1.03,-0.86,-0.53],P:[-0.20,-0.58,-0.94,-1.42,-1.88]},
+    inv:{l:"investissement public (Mésange, p. 102)",S:[0.49,0.26,0.40,0.70,0.82],Y:[-1.31,-1.38,-1.22,-0.93,-0.57],P:[-0.31,-0.92,-1.37,-1.86,-2.25]},
+    cotp:{l:"cotisations employeurs (Mésange, p. 107)",S:[0.72,0.42,0.27,0.24,0.17],Y:[-0.20,-0.55,-0.76,-0.97,-1.29],P:[0.36,0.70,0.87,1.09,1.32]},
+    tva:{l:"TVA (Mésange, p. 112)",S:[0.80,0.36,0.28,0.37,0.44],Y:[-0.32,-0.66,-0.72,-0.81,-0.78],P:[1.48,1.58,1.52,1.30,0.89]},
+    csg:{l:"CSG (Mésange, p. 115)",S:[0.81,0.50,0.43,0.52,0.54],Y:[-0.41,-0.84,-0.90,-0.81,-0.80],P:[-0.05,-0.24,-0.40,-0.50,-0.42]},
+    ir:{l:"impôt sur le revenu (Mésange, p. 117)",S:[0.81,0.50,0.42,0.51,0.50],Y:[-0.41,-0.83,-0.88,-0.81,-0.87],P:[-0.04,-0.21,-0.34,-0.35,-0.14]},
+    carb:{l:"fiscalité de l'énergie (Mésange, variante taxe carbone, p. 120)",S:[0.68,0.15,0.14,0.24,0.28],Y:[-0.51,-0.80,-0.75,-0.87,-0.86],P:[1.64,1.72,1.68,1.49,1.01]},
+    pens:{l:"pensions (COR 2026, p. 20)",S:[0.5,0.5,0.5,0.5,0.5],Y:[-0.75,-0.75,-0.75,-0.75,-0.75],P:[0,0,0,0,0]},
+    rate:{l:"taux d'intérêt (Mésange, p. 133)",S:[-0.04,-0.24,-0.36,-0.45,-0.69],Y:[-0.17,-0.60,-0.78,-1.00,-1.52],P:[0.10,0.32,0.52,0.96,2.11]}
   };
   const HZ=[1,2,3,5,10];
   const mesAt=(arr,tau)=>{if(tau<=1)return arr[0];if(tau>=10)return arr[4];for(let k=1;k<5;k++){if(tau<=HZ[k]){const a=HZ[k-1],b=HZ[k];return arr[k-1]+(arr[k]-arr[k-1])*(tau-a)/(b-a)}}return arr[4]};
@@ -1177,32 +1199,41 @@
     n_dom:"ir",n_abat:"ir",n_hsup:"ir",n_ep:"ir",n_dons:"ir",n_garde:"ir",n_exofam:"ir",n_pinel:"ir",
     r_gen:"pens",r_pub:"pens",r_compl:"pens",r_ns:"pens"};
   const catOf=x=>x.path||x.debt||x.sup?null:(CAT[x.id]||(x.kind==="dep"?"dep":null));
-  function simulate(p,base){
-    let d=D0,i=I0,cyc=0,gdp=GDP0/(1+gpath(p,0)/100),Lprev=0;const out=[];
-    const i1=I0+(p.rate-I0)/p.mat, PB0=-(DEF26-D0*i1/100/(1+gpath(p,0)/100)); // calage sur le déficit officiel 2026
-    const E=ALL.map(()=>[]);
+  // opts : {sched:[p2027,p2028,…] (mode mandat), shk:{g:[],r:[],pb:[]} (chocs), ovr:{…} (réglages forcés)}
+  function simulate(p0,base,opts){
+    opts=opts||{};const P0=Object.assign({},p0,opts.ovr||{});
+    const pAt=t=>{const sc=opts.sched;if(!sc||!sc.length||t<1)return P0;return Object.assign({},P0,sc[Math.min(t,sc.length)-1])};
+    const shk=opts.shk||{};
+    let d=D0,i=I0,cyc=0,gdp=GDP0/(1+gpath(P0,0)/100),Lprev=0,Pprev=0;const out=[];
+    const i1=I0+(P0.rate-I0)/P0.mat, PB0=-(DEF26-D0*i1/100/(1+gpath(P0,0)/100)); // calage sur le déficit officiel 2026
+    const E=ALL.map(()=>[]),DR=[0];
     for(let t=0;t<YEARS;t++){
-      let sum=0,dc=0,fb=0,L=0,sale=0;const c=[];
+      const p=pAt(t);
+      let sum=0,dc=0,fb=0,L=0,Pr=0,sale=0;const c=[];
       ALL.forEach((x,k)=>{
-        const v=base?0:p[x.id], st=x.start||0;
-        const e=x.path?x.path(t,v):(t<Math.max(st,1)?0:sw(x,v)/GDP0*100*frac(st?t-st+1:t,x.ramp));
+        const v=base?0:(p[x.id]||0), st=x.start||0;
+        const e=x.path?x.path(t,v):(t<Math.max(st,1)?0:sw(x,v)/GDP0*100*(opts.sched?1:frac(st?t-st+1:t,x.ramp)));
         E[k][t]=e;sum+=e;c.push(e);
         if(x.debt&&!base)sale+=x.debt(t,v);
-        if(x.sup&&v){for(let s0=1;s0<=Math.min(t,5);s0++)L+=v/5*mesAt(x.sup.Y,t-s0+1)}
+        if(x.sup&&v){for(let s0=1;s0<=Math.min(t,5);s0++){L+=v/5*mesAt(x.sup.Y,t-s0+1);if(p.prix)Pr+=v/5*mesAt(x.sup.P,t-s0+1)}}
         const cat=p.mes?catOf(x):null;
         if(cat){ // superposition des variantes officielles, année par année
           const M=MES[cat];
-          for(let s0=1;s0<=t;s0++){const de=E[k][s0]-(E[k][s0-1]||0);if(de){const tau=t-s0+1;fb+=de*(mesAt(M.S,tau)-1);L+=de*mesAt(M.Y,tau)}}
+          for(let s0=1;s0<=t;s0++){const de=E[k][s0]-(E[k][s0-1]||0);if(de){const tau=t-s0+1;fb+=de*(mesAt(M.S,tau)-1);L+=de*mesAt(M.Y,tau);if(p.prix)Pr+=de*mesAt(M.P,tau)}}
         } else if(!x.path&&p.mes) dc+=p.ms*(e-(t?E[k][t-1]:0));
       });
-      const g=gpath(p,t)-dc+(L-Lprev);Lprev=L;
-      cyc=PERSIST*cyc-dc;
-      const dr=drift(p,t), act=fb+SEMI*cyc, pb=PB0-dr+sum+act;
-      i=i+(p.rate-i)/p.mat;
+      // taux des nouveaux emprunts : curseur + lien avec la dette (DG Trésor : +2 pb par point de dette) + chocs
+      const rNew=p.rate+(p.rlink&&t>0?0.02*(d-D0):0)+((shk.r&&shk.r[t])||0);
+      DR[t]=rNew-RDEF;
+      if(p.mes&&p.rlink!==undefined){const M=MES.rate;for(let s0=1;s0<=t;s0++){const dr0=DR[s0]-(DR[s0-1]||0);if(dr0){const tau=t-s0+1;fb+=dr0*mesAt(M.S,tau);L+=dr0*mesAt(M.Y,tau);if(p.prix)Pr+=dr0*mesAt(M.P,tau)}}}
+      const g=gpath(p,t)-dc+(L-Lprev)+(Pr-Pprev)+((shk.g&&shk.g[t])||0);Lprev=L;Pprev=Pr;
+      cyc=PERSIST*cyc-dc-((shk.g&&shk.g[t])||0);
+      const dr=drift(p,t), act=fb+SEMI*cyc, pb=PB0-dr+sum+act+((shk.pb&&shk.pb[t])||0);
+      i=i+(rNew-i)/p.mat;
       const interest=d*i/100/(1+g/100);
       gdp*=1+g/100;
       d=d*(1+i/100)/(1+g/100)-pb-sale/gdp*100;
-      out.push({y:Y0+t,d,pb,i,g,gdp,intPct:interest,intMd:interest/100*gdp,c,dr,cyc,act,L});
+      out.push({y:Y0+t,d,pb,def:interest-pb,i,rNew,g,gdp,intPct:interest,intMd:interest/100*gdp,c,dr,cyc,act,L,Pr});
     }
     return out;
   }
@@ -1248,9 +1279,9 @@
     $("kpky").textContent=pk.y===last.y?"toujours en hausse en 2045":"atteint en "+pk.y;
     $("kint").textContent=fr(last.intMd,0)+" Md€";
     $("kints").textContent=fr(last.intPct)+" % du PIB";
-    [[2030,"kpib30"],[2035,"kpib35"]].forEach(([y,id])=>{const a=at(s,y),b=at(sq,y),gap=(a.gdp/b.gdp-1)*100;
-      $(id).textContent=(Math.abs(gap)<0.005?"0,0":sign(gap,1))+" %";
-      $(id+"s").textContent=Math.abs(gap)<0.005?"par rapport à la législation actuelle":`soit ${sign(a.gdp-b.gdp,0)} Md€ de richesse produite dans l'année, par rapport à la législation actuelle`;});
+    [[2030,"kpib30"],[2035,"kpib35"]].forEach(([y,id])=>{const a=at(s,y),b=at(sq,y),vol=a.L-b.L,pr=a.Pr-b.Pr,eur=a.gdp-b.gdp;
+      $(id).textContent=(Math.abs(vol)<0.005?"0,0":sign(vol,1))+" %";
+      $(id+"s").textContent=Math.abs(vol)<0.005&&Math.abs(pr)<0.005?"par rapport à la législation actuelle":`prix ${Math.abs(pr)<0.005?"inchangés":sign(pr,1)+" %"} ; en euros : ${sign(eur,0)} Md€ de richesse produite dans l'année`;});
 
     // Bilan 2033, en Md€ de 2026
     const r33=at(s,2033),k=GDP0/100,rows=[];
@@ -1273,13 +1304,34 @@
       :'<p class="empty">Aucune mesure pour l\'instant. Bougez un curseur pour voir qui gagne et qui perd.</p>';
 
     document.querySelectorAll("#presets button").forEach(b=>{const pr=PRESETS[b.dataset.p];b.classList.toggle("on",ALL.every(x=>Math.abs((pr[x.id]||0)-p[x.id])<1e-9))});
-    drawChart(s,sq);
+    // Fourchette : mêmes choix, sous les différentes hypothèses de modèle
+    const combos=[{mes:0,prix:0,rlink:0},{mes:1,prix:0,rlink:0},{mes:1,prix:1,rlink:0},{mes:1,prix:1,rlink:1}];
+    const vs=combos.map(c=>simulate(Object.assign({},p,c),false));
+    const band=s.map((o,k)=>({y:o.y,lo:Math.min(...vs.map(v=>v[k].d)),hi:Math.max(...vs.map(v=>v[k].d))}));
+    const b45=band[band.length-1];
+    $("bandtxt").textContent=`Selon les hypothèses retenues, la dette de 2045 irait de ${fr(b45.lo,0)} % (calcul comptable, sans effet sur l'activité) à ${fr(b45.hi,0)} % du PIB.`;
+    drawChart(s,sq,band);
+    decile(p);
   }
 
+
+  // ---------- Effet par niveau de vie (Drees, fiche 02, tableau 1, 2022) ----------
+  const DEC={g:["10 % les plus modestes (sous D1)","De D1 à D2","De D2 à D3","De D3 à D4","60 % les plus aisés (au-dessus de D4)"],
+    rev:[1159,1792,2202,2546,4613],
+    sh:{ret:[22.4,32.0,36.1,34.2,25.7],chom:[7.8,5.6,4.7,3.4,1.7],min:[16.0,8.1,3.8,1.7,0.4],pa:[3.2,2.9,2.2,1.4,0.3],fam:[11.0,6.5,4.0,2.9,0.9],log:[11.8,5.1,2.1,0.8,0.2],imp:[-12.0,-7.1,-8.6,-10.2,-19.9]},
+    map:{ret:["r_gen","r_pub","r_compl","r_ns"],chom:["e_are"],min:["r_mv","f_rsa","f_aah","f_ass"],pa:["f_pa"],fam:["f_af","f_cf","f_asf","f_ajpp","f_paje","f_cmg","f_prepare","f_ars","f_famaut"],log:["e_apl"],imp:["t_ir","t_csg"]}};
+  const byId={};ALL.forEach(x=>byId[x.id]=x);
+  function decile(p){
+    const chg={};Object.entries(DEC.map).forEach(([k,ids])=>{const a=ids.reduce((s,id)=>s+byId[id].amt,0);chg[k]=ids.reduce((s,id)=>s+byId[id].amt*p[id],0)/a});
+    const res=DEC.g.map((n,gi)=>{let pct=0;Object.keys(DEC.sh).forEach(k=>pct+=DEC.sh[k][gi]*chg[k]/100);return {n,pct,eur:DEC.rev[gi]*pct/100}});
+    const mx=Math.max(0.5,...res.map(o=>Math.abs(o.pct)));
+    $("dec").innerHTML=res.map(o=>`<div class="bar"><div class="name"><span>${o.n}</span><div class="track"><div class="fill" style="width:${Math.abs(o.pct)/mx*100}%;background:${o.pct>=0?"var(--good)":"var(--warn)"}"></div></div><span class="det">${Math.abs(o.eur)<0.5?"Aucun changement":sign(o.eur,0)+" € par mois pour un ménage moyen de ce groupe"}</span></div><span class="v">${Math.abs(o.pct)<0.005?"0 %":sign(o.pct,1)+" %"}</span></div>`).join("");
+    return res;
+  }
   let pts=[];
-  function drawChart(s,sq){
+  function drawChart(s,sq,band){
     const svg=$("chart"),W=720,H=280,Lm=46,R=16,T=14,B=30;
-    const all=s.map(o=>o.d).concat(sq.map(o=>o.d),[D0]);
+    const all=s.map(o=>o.d).concat(sq.map(o=>o.d),[D0],band?band.map(o=>o.lo).concat(band.map(o=>o.hi)):[]);
     const lo=Math.max(0,Math.floor((Math.min(...all)-5)/10)*10),hi=Math.ceil((Math.max(...all)+5)/10)*10;
     const yEnd=s[s.length-1].y,x=y=>Lm+(y-2025)/(yEnd-2025)*(W-Lm-R),yv=v=>T+(hi-v)/(hi-lo)*(H-T-B);
     let g="";const st=(hi-lo)>80?20:10;
@@ -1287,7 +1339,8 @@
     [2025,2030,2035,2040,2045].forEach(y=>g+=`<text x="${x(y)}" y="${H-8}" text-anchor="middle">${y}</text>`);
     const line=a=>"M"+[[2025,D0]].concat(a.map(o=>[o.y,o.d])).map(([a,b])=>x(a).toFixed(1)+","+yv(b).toFixed(1)).join(" L");
     const spth=line(s);
-    g+=`<path d="${spth} L${x(yEnd)},${H-B} L${x(2025)},${H-B} Z" fill="var(--accent)" fill-opacity="0.08"/>`;
+    if(band){const up=band.map(o=>x(o.y).toFixed(1)+","+yv(o.hi).toFixed(1)),dn=band.slice().reverse().map(o=>x(o.y).toFixed(1)+","+yv(o.lo).toFixed(1));
+      g+=`<path d="M${x(2025)},${yv(D0)} L${up.join(" L")} L${dn.join(" L")} Z" fill="var(--accent)" fill-opacity="0.13"/>`;}
     g+=`<path d="${line(sq)}" fill="none" stroke="var(--ghost)" stroke-width="2" stroke-dasharray="5 4"/>`;
     g+=`<path d="${spth}" fill="none" stroke="var(--accent)" stroke-width="2.5" stroke-linejoin="round"/>`;
     const a=s[s.length-1],b=sq[sq.length-1],close=Math.abs(yv(a.d)-yv(b.d))<16;
@@ -1310,20 +1363,227 @@
   // Notes et sources
   const used=Object.keys(S);
   $("notes").innerHTML=`
-    <p><strong>Comment c'est calculé.</strong> Chaque ligne part de son montant officiel. Le curseur fait varier ce montant en % ; l'effet direct sur le solde est ce pourcentage appliqué au montant. S'y ajoute l'effet de la mesure sur l'activité, repris des variantes officielles : modèle Mésange de la DG Trésor (Cahiers n° 2017-04, p. 102 à 120) pour la dépense publique, l'investissement public, les cotisations employeurs, la TVA, la CSG, l'impôt sur le revenu et la fiscalité de l'énergie ; COR (rapport 2026, p. 20) pour les pensions et l'âge de départ. Pour chaque type de mesure, ces variantes donnent l'amélioration réelle du solde et l'écart de PIB à 1, 2, 3, 5 et 10 ans pour 1 point de PIB d'effort ; le simulateur les applique à chaque hausse de l'effort, année après année. Résultat : il faut un effort direct nettement plus grand que le déficit à combler, car une partie de l'économie est reperdue en activité. Le réglage « Effets des mesures sur l'activité » permet de revenir au calcul comptable. Les montants sont convertis en points de PIB avec le PIB 2026 (environ 3 068 Md€ : PIB 2025 de l'Insee, augmenté de la croissance et de l'inflation prévues par le RESF 2027). Ils restent ceux de l'année indiquée, sans actualisation. Chaque mesure monte en charge progressivement à partir de 2027, puis reste constante en part du PIB.</p>
+    <p><strong>Comment c'est calculé.</strong> Chaque ligne part de son montant officiel. Le curseur fait varier ce montant en % ; l'effet direct sur le solde est ce pourcentage appliqué au montant. S'y ajoute l'effet de la mesure sur l'activité, repris des variantes officielles : modèle Mésange de la DG Trésor (Cahiers n° 2017-04, p. 102 à 120) pour la dépense publique, l'investissement public, les cotisations employeurs, la TVA, la CSG, l'impôt sur le revenu et la fiscalité de l'énergie ; COR (rapport 2026, p. 20) pour les pensions et l'âge de départ. Pour chaque type de mesure, ces variantes donnent l'amélioration réelle du solde et l'écart de PIB à 1, 2, 3, 5 et 10 ans pour 1 point de PIB d'effort ; le simulateur les applique à chaque hausse de l'effort, année après année. Résultat : il faut un effort direct nettement plus grand que le déficit à combler, car une partie de l'économie est reperdue en activité. Ces variantes donnent aussi l'effet sur les prix, compté car la dette se mesure en euros. Enfin, le taux des nouveaux emprunts monte de 0,02 point par point de dette au-dessus de son niveau de fin 2025 (DG Trésor, Trésor-Éco n° 334, 2023), et un taux plus élevé freine l'activité (variante « taux d'intérêt » de Mésange, p. 133). Chacun de ces trois mécanismes peut être désactivé dans les hypothèses économiques ; la zone colorée du graphique montre l'écart entre le calcul comptable et le calcul complet. Les montants sont convertis en points de PIB avec le PIB 2026 (environ 3 068 Md€ : PIB 2025 de l'Insee, augmenté de la croissance et de l'inflation prévues par le RESF 2027). Ils restent ceux de l'année indiquée, sans actualisation. Chaque mesure monte en charge progressivement à partir de 2027, puis reste constante en part du PIB.</p>
     <p><strong>Scénario de base (« législation actuelle »).</strong> Déficit 2026 calé sur la prévision officielle de 5,4 % du PIB (projet de loi de finances 2027). Ensuite, sans nouvelle mesure : hausse des crédits des armées prévue par la programmation militaire actualisée (57,1 Md€ en 2026, 76,3 Md€ en 2030, hors pensions), fin de la surtaxe des grandes entreprises prévue par la loi (environ 7,3 Md€ en 2026), poids des retraites selon le COR (14,1 % du PIB en 2030, 14,2 % en 2045), effets démographiques sur la santé (+0,3 point de PIB d'ici 2070), la dépendance (+0,7 point) et l'éducation (−0,9 point) selon le rapport européen sur le vieillissement cité par la Cour des comptes (décembre 2025). Les mesures du projet de budget 2027 (environ 54 Md€ d'effort annoncé) ne sont pas incluses : c'est à vous de choisir les vôtres.</p>
     <p><strong>Dette et intérêts.</strong> Dette de 115,7 % du PIB fin 2025 (Insee). Chaque année, une fraction 1/maturité de la dette est refinancée au taux choisi ; le taux moyen de départ est déduit des intérêts 2025 (64,7 Md€, Insee).</p>
-    <p><strong>Ce qui est une hypothèse et non un chiffre officiel.</strong> La croissance et l'inflation après 2027 ; le classement de chaque ligne dans une variante officielle (par exemple, les niches fiscales des ménages traitées comme l'impôt sur le revenu, les niches sociales comme les cotisations employeurs, les accises sur l'alcool et la taxe sur les billets d'avion comme la TVA, la redevance poids lourds comme la fiscalité de l'énergie) ; les lignes droites tracées entre les horizons publiés (1, 2, 3, 5 et 10 ans pour Mésange ; 2, 10 et 20 ans pour le COR) et le maintien de la valeur à 10 ans au-delà ; pour les pensions, le milieu de la fourchette de PIB du COR ; l'absence d'effet sur l'activité (réglable) pour les mesures sans variante officielle : impôt sur les sociétés, taxe foncière, successions, IFI, tabac, impôt sur la fortune, fraude, niches des entreprises et « autres niches » ; les variantes Mésange datent de 2017 et ne tiennent compte que des volumes, pas des effets sur les prix ; la répartition régulière, année par année, des effets démographiques projetés à 2070 pour la santé, la dépendance et l'éducation. Les montants moyens par personne sont, pour les prestations sociales, ceux publiés par la Drees (2023) ou la Cnaf (2026) ; pour les autres lignes, des divisions de montants officiels par des effectifs officiels, signalées dans chaque fiche.</p>
-    <p><strong>Ce qui n'est pas couvert, faute de chiffrage officiel accessible.</strong> un recul de l'âge de départ de plus d'un an au-delà de 64 ans ; un effet de la baisse du déficit sur les taux d'intérêt (à régler soi-même avec le curseur de taux) ; le coût d'un point d'indice de la fonction publique ; les cotisations de retraite encore comprises dans les petites missions de l'État ; les dépenses de l'État non détaillées ici (gestion des finances publiques, administration territoriale, pouvoirs publics…).</p>
+    <p><strong>Ce qui est une hypothèse et non un chiffre officiel.</strong> La croissance et l'inflation après 2027 ; le classement de chaque ligne dans une variante officielle (par exemple, les niches fiscales des ménages traitées comme l'impôt sur le revenu, les niches sociales comme les cotisations employeurs, les accises sur l'alcool et la taxe sur les billets d'avion comme la TVA, la redevance poids lourds comme la fiscalité de l'énergie) ; les lignes droites tracées entre les horizons publiés (1, 2, 3, 5 et 10 ans pour Mésange ; 2, 10 et 20 ans pour le COR) et le maintien de la valeur à 10 ans au-delà ; pour les pensions, le milieu de la fourchette de PIB du COR ; l'absence d'effet sur l'activité (réglable) pour les mesures sans variante officielle : impôt sur les sociétés, taxe foncière, successions, IFI, tabac, impôt sur la fortune, fraude, niches des entreprises et « autres niches » ; les variantes Mésange datent de 2017 ; l'évolution des prix à la consommation y sert d'approximation des prix du PIB ; les pensions n'ont pas d'effet sur les prix, le COR ne le chiffrant pas ; l'élasticité des taux à la dette est appliquée au niveau de la dette, alors que la DG Trésor l'estime sur l'écart entre taux et croissance ; l'effet des taux sur l'activité reprend une variante qui porte sur les taux réels de toute l'économie ; l'effet par niveau de vie suppose que chaque ménage voit sa prestation ou son impôt varier du même pourcentage, et traite l'impôt sur le revenu et la CSG ensemble (la Drees ne les sépare pas) ; la répartition régulière, année par année, des effets démographiques projetés à 2070 pour la santé, la dépendance et l'éducation. Les montants moyens par personne sont, pour les prestations sociales, ceux publiés par la Drees (2023) ou la Cnaf (2026) ; pour les autres lignes, des divisions de montants officiels par des effectifs officiels, signalées dans chaque fiche.</p>
+    <p><strong>Ce qui n'est pas couvert, faute de chiffrage officiel accessible.</strong> un recul de l'âge de départ de plus d'un an au-delà de 64 ans ; le coût d'un point d'indice de la fonction publique ; les cotisations de retraite encore comprises dans les petites missions de l'État ; les dépenses de l'État non détaillées ici (gestion des finances publiques, administration territoriale, pouvoirs publics…).</p>
     <p><strong>Retraites : correction d'octobre 2026.</strong> Le curseur sur la réforme de 2023 reprenait le rendement de la réforme entière (12,9 Md€ en 2030). Or la loi n'a suspendu la réforme que pour les générations 1964 à 1968 : le COR chiffre le coût de la suspension à 1,8 Md€ par an en moyenne jusqu'en 2032, puis plus rien (rapport annuel juin 2026, p. 7 et 57). Le curseur a été corrigé, et un nouveau curseur chiffre un recul de l'âge légal à 65 ans d'après le même rapport (p. 20).</p>
-    <p><strong>Octobre 2026 : effets sur l'activité.</strong> Jusqu'ici, la plupart des mesures étaient comptées sans effet sur l'activité. Avec les variantes officielles, un même effort direct améliore beaucoup moins la dette : les scénarios d'exemple ont dû être portés d'environ 140 à 220-240 Md€ d'effort direct par an pour stabiliser la dette. Avec le calcul comptable, environ 140 Md€ suffisent.</p>
+    <p><strong>Octobre 2026 : effets sur l'activité.</strong> Jusqu'ici, la plupart des mesures étaient comptées sans effet sur l'activité. Avec les variantes officielles, un même effort direct améliore beaucoup moins la dette : les scénarios d'exemple ont dû être portés d'environ 140 à 220-270 Md€ d'effort direct par an pour stabiliser la dette, une fois comptés aussi les effets sur les prix et le lien entre dette et taux. Avec le calcul comptable, environ 140 Md€ suffisent.</p>
     <p><strong>Santé.</strong> Les soins de ville sont détaillés sur le champ du régime général (la grande majorité des assurés), avant les remises des laboratoires, d'après les Comptes de la Sécurité sociale d'octobre 2026 ; les hôpitaux et établissements médico-sociaux reprennent l'objectif 2026 voté. Les autres régimes d'assurance maladie et les remises ne sont donc pas inclus dans les lignes de soins de ville.</p>
-    <p><strong>Leviers de croissance.</strong> Deux curseurs reprennent les variantes « structurelles » du modèle Mésange : une hausse de la population active et une hausse de l'efficacité du travail, chacune atteinte progressivement en 5 ans. Ils augmentent le PIB (+0,61 % à 10 ans pour 1 %) mais améliorent peu le solde public, car l'économie met plusieurs années à absorber le choc et les prix baissent. Le simulateur ne compte que les volumes : la baisse des prix, qui réduirait la valeur en euros du PIB et donc le gain sur le ratio de dette, n'est pas prise en compte. D'autres curseurs soutiennent aussi la croissance : le recul de l'âge de départ (COR), une hausse de l'investissement public ou une baisse des cotisations patronales, mais ces deux derniers coûtent de l'argent.</p>
+    <p><strong>Leviers de croissance.</strong> Deux curseurs reprennent les variantes « structurelles » du modèle Mésange : une hausse de la population active et une hausse de l'efficacité du travail, chacune atteinte progressivement en 5 ans. Ils augmentent le PIB en volume (+0,61 % à 10 ans pour 1 %) mais améliorent peu le solde public, car l'économie met plusieurs années à absorber le choc. Ils font aussi baisser les prix (environ −0,9 à −1,1 % à 10 ans), ce qui réduit la valeur en euros du PIB : avec les effets sur les prix activés, leur gain sur le ratio de dette est donc faible. D'autres curseurs soutiennent aussi la croissance : le recul de l'âge de départ (COR), une hausse de l'investissement public ou une baisse des cotisations patronales, mais ces deux derniers coûtent de l'argent.</p>
     <p><strong>Nouvelles recettes inspirées de l'étranger.</strong> Comme pour l'impôt sur la fortune, ces lignes transposent le rendement officiel d'un prélèvement existant (Allemagne, Royaume-Uni, Espagne) en part de PIB, puis retranchent le rendement de l'équivalent français quand il existe. Les années de référence diffèrent légèrement (2023 à 2026) ; elles sont indiquées dans chaque fiche.</p>
     <p><strong>Impôt sur la fortune.</strong> Aucune administration française n'a publié de chiffrage d'un impôt sur les très hauts patrimoines. Le curseur reprend donc le rendement, en part du PIB, des impôts sur la fortune existant en Espagne, en Norvège et en Suisse (sources officielles nationales), ou de l'ancien ISF français, et l'applique au PIB français. C'est une transposition, pas une prévision : le rendement réel dépendrait du seuil, du taux, des exonérations et des comportements en France.</p>
     <p><strong>Vérification d'octobre 2026.</strong> Chaque montant a été recoupé avec le document source (loi de finances, comptes de la Sécurité sociale, Cnaf, Drees, Voies et moyens, annexes du budget de la Sécurité sociale, COR, Cour des comptes, Insee, Sénat). Corrections faites : cotisations de retraite retirées de la ligne police et gendarmerie (−8,2 Md€), minimum vieillesse aligné sur la Drees (4,1 Md€), montant des remises des laboratoires, coût de la suspension de la réforme 2023. Pour les niches fiscales, la fiche indique la fiabilité donnée par l'administration : quatre ne sont connues qu'en « ordre de grandeur ». Limite restante : les autres missions de l'État (action extérieure, écologie, agriculture, culture…) comprennent encore les cotisations de retraite de leurs agents, faute de montant publié pour chacune ; l'économie y est donc un peu surestimée.</p>
     <p><strong>Années et périmètres.</strong> Les crédits des missions de l'État sont ceux votés par la loi de finances du 19 février 2026 (état B). Ils comprennent les cotisations de retraite des agents ; pour l'école, la justice et les armées, celles-ci sont retirées à l'aide des montants publiés par le Sénat, pour ne pas les compter deux fois avec les retraites. Le détail de certaines lignes (prime d'activité, aide aux apprentis, allocations de solidarité) vient du projet de loi, la loi n'étant votée que par programme. Les pensions par régime sont les montants 2023 publiés par la Drees, arrondis au milliard ; la retraite du combattant et les autres pensions versées par l'État au titre de l'intervention sociale (1 Md€) n'ont pas de curseur.</p>
     <p><strong>Sources.</strong></p><ul>${used.map(k=>`<li><a href="${S[k][1]}" target="_blank" rel="noopener">${S[k][0]}</a></li>`).join("")}</ul>`;
+
+
+  // ---------- Mesures éprouvées ----------
+  const MEAS=[
+    {id:"age",o:"fr",fx:["croissance","economies"],t:"Reculer l'âge légal de départ",w:"France, 2010 et 2023",
+     k:"L'âge légal est passé de 60 à 62 ans (2010), puis de 62 à 64 ans (2023). C'est le levier qui améliore le plus le solde public tout en augmentant le PIB.",
+     who:"<b>2010</b> : gouvernement Fillon, présidence Sarkozy, UMP (droite). <b>2023</b> : gouvernement Borne, présidence Macron, Renaissance (centre) ; loi adoptée sans vote final grâce à l'article 49.3. La réforme de 2023 a été en partie suspendue par la loi de financement de la Sécurité sociale pour 2026.",
+     what:"Relèvement progressif, génération par génération, de l'âge à partir duquel on peut toucher sa retraite, et en 2023 accélération de la hausse de la durée de cotisation.",
+     num:"Selon le COR (2026), un an de plus d'âge légal améliore le solde public de 0,3 à 0,6 point de PIB au bout de 10 ans, effets sur l'emploi compris, et crée 160 000 à 250 000 emplois. La réforme de 2023 devait améliorer le solde des retraites de 12,9 Md€ en 2030 (Sénat).",
+     res:"Pour la réforme de 2010, une étude publiée par le COR (2016) trouve une hausse de 14 points du taux d'emploi à 60 ans ; mais environ un tiers des économies est reperdu en chômage, arrêts maladie et invalidité supplémentaires.",
+     sim:"Curseur « Reculer l'âge légal d'un an de plus (65 ans) ».",act:[{l:"Appliquer : âge légal à 65 ans",set:{x_aod:1}}],see:"x_aod",src:["cor26","cor_2010","senat_375"]},
+    {id:"cice",o:"fr",fx:["croissance"],t:"Baisser le coût du travail : du CICE aux allègements de cotisations",w:"France, depuis 2013",
+     k:"Un crédit d'impôt proportionnel aux salaires jusqu'à 2,5 Smic, transformé en 2019 en baisse permanente des cotisations patronales.",
+     who:"<b>Création</b> : gouvernement Ayrault, présidence Hollande, PS (gauche, social-démocrate), après le rapport Gallois sur la compétitivité (2012). <b>Transformation en allègements</b> : gouvernement Philippe, présidence Macron, LREM (centre), en 2019.",
+     what:"Les entreprises déduisaient de leur impôt un pourcentage de leur masse salariale (taux ramené à 6 % en 2018). Depuis 2019, la baisse passe directement par les cotisations, ce qui en fait l'essentiel des 74 Md€ d'allègements actuels.",
+     num:"Coût du CICE : 20,1 Md€ en 2018 (Sénat). France Stratégie (2020) estime l'effet à environ 100 000 emplois créés ou sauvegardés selon les études d'entreprises, et autour de 160 000 en tenant compte de son financement selon les modèles macroéconomiques, des chiffres que l'organisme juge fragiles.",
+     res:"Effet réel sur l'emploi, mais coût élevé par emploi ; effets sur les salaires, l'investissement et les exportations difficiles à établir. Le modèle Mésange de la DG Trésor donne à long terme +1,7 % de PIB pour 1 point de PIB de baisse des cotisations patronales.",
+     sim:"Curseur « Allègements généraux de cotisations patronales » (aides aux entreprises) : le réduire rapporte de l'argent mais coûte des emplois.",act:[{l:"Renforcer les allègements de 10 %",set:{n_cotis:10}}],see:"n_cotis",src:["fs_cice","senat_cice","mesange"]},
+    {id:"chom",o:"fr",fx:["economies","croissance"],t:"Durcir les règles de l'assurance chômage",w:"France, 2019-2021",
+     k:"Il faut avoir travaillé plus longtemps pour être indemnisé, l'allocation est calculée autrement, et elle baisse au bout de 6 mois pour les hauts salaires.",
+     who:"Gouvernements Philippe puis Castex, présidence Macron, LREM (centre).",
+     what:"Quatre volets : 6 mois de travail sur 24 au lieu de 4 sur 28 pour ouvrir des droits, nouveau calcul de l'allocation pour les carrières hachées, dégressivité au-delà d'environ 4 500 € brut, bonus-malus sur les cotisations des entreprises qui abusent des contrats courts. Une nouvelle réforme a suivi en 2023.",
+     num:"Économies estimées par l'Unédic : 0,8 Md€ (conditions d'accès), 1,0 Md€ (calcul) et 0,5 Md€ (dégressivité) par an, soit 2,3 Md€, moins environ 0,8 Md€ de dépenses nouvelles (aide aux démissionnaires porteurs de projet, financement de France Travail).",
+     res:"Environ 1,5 million de personnes concernées ; 190 000 personnes par an ne sont plus indemnisées. Retour à l'emploi plus rapide : la part des personnes aux carrières hachées qui retrouvent un emploi en 6 mois passe de 52 % à 56-58 %, surtout en contrats courts ; la dégressivité réduit le chômage de 24 jours en moyenne.",
+     sim:"Curseur « Allocations chômage » (emploi et logement).",act:[{l:"Appliquer : −7 % sur les allocations (≈ 2,3 Md€)",set:{e_are:-7}}],see:"e_are",src:["unedic_eval"]},
+    {id:"app",o:"fr",fx:["croissance","economies"],t:"Développer l'apprentissage",w:"France, depuis 2018",
+     k:"Une libéralisation de l'offre de formation en 2018, puis une aide massive à l'embauche d'apprentis à partir de 2020 : les entrées en apprentissage ont presque triplé.",
+     who:"Loi « Avenir professionnel » de 2018, gouvernement Philippe, LREM (centre) ; aide exceptionnelle à l'embauche de 2020, gouvernement Castex. Aide réduite depuis 2025.",
+     what:"Financement des centres de formation au contrat, ouverture à tous les niveaux de diplôme, aide versée à l'employeur pour chaque apprenti embauché.",
+     num:"Entrées en apprentissage : 321 038 en 2018, 852 000 en 2023. Dépense publique : 13,9 Md€ en 2022 selon la direction du budget (19,9 Md€ en coût complet selon l'OFCE), dont 4,8 Md€ d'aides à l'embauche. L'IGF et l'IGAS (2024) identifient 1,5 Md€ d'économies et 0,4 Md€ de recettes possibles, par exemple 554 M€ en supprimant l'aide pour les diplômes de niveau licence et plus dans les entreprises de 250 salariés et plus.",
+     res:"62 % des nouveaux apprentis préparent un diplôme supérieur au bac en 2023 : l'aide profite de plus en plus à des jeunes qui auraient sans doute trouvé un emploi sans elle (effet d'aubaine signalé mais non chiffré par les inspections).",
+     sim:"Curseur « Aide à l'embauche d'apprentis » (emploi et logement).",act:[{l:"Appliquer : fin de l'aide au-delà du bac dans les grandes entreprises (−554 M€)",set:{e_app:-23}}],see:"e_app",src:["igf_app","senat_travail"]},
+    {id:"rgpp",o:"fr",fx:["economies"],t:"Réduire les effectifs de l'État (RGPP)",w:"France, 2007-2012",
+     k:"Revue générale des politiques publiques, avec la règle du non-remplacement d'un fonctionnaire sur deux partant à la retraite.",
+     who:"Gouvernement Fillon, présidence Sarkozy, UMP (droite). Arrêtée en 2012 par le gouvernement Ayrault, PS (gauche).",
+     what:"Revue des missions de chaque ministère, fusions de services, non-remplacement d'un départ à la retraite sur deux, avec la moitié des économies rendue aux agents sous forme de primes et de mesures catégorielles.",
+     num:"Environ 11,9 Md€ d'économies fin 2012 selon la direction du budget, pour un objectif de 15 Md€ sur 2009-2013. Effectifs de l'État : −5,4 % entre 2009 et 2012, dont 3 points attribuables à la RGPP.",
+     res:"Le bilan des inspections (2012) juge la démarche « novatrice » mais trop rapide et centralisée, limitée à l'État (moins d'un tiers de la dépense publique), mal mesurée et mal vécue par les agents.",
+     sim:"Curseurs des missions de l'État (éducation, défense, sécurité, justice, autres missions). Pas de bouton : l'effort de la RGPP portait sur de nombreuses lignes.",act:[],see:null,src:["rgpp"]},
+    {id:"ecotaxe",o:"fr",fx:["recettes","contre"],t:"Taxer les poids lourds : l'écotaxe abandonnée",w:"France, 2009-2014",
+     k:"Une redevance kilométrique pour les camions sur les routes nationales et départementales, votée puis abandonnée juste avant son lancement.",
+     who:"<b>Vote</b> : loi Grenelle de 2009, gouvernement Fillon, UMP (droite), adoptée presque à l'unanimité. <b>Suspension</b> : octobre 2013, gouvernement Ayrault, PS (gauche), après le mouvement des « bonnets rouges ». <b>Abandon</b> : octobre 2014, gouvernement Valls, PS (ministre de l'Écologie : Ségolène Royal).",
+     what:"Péage électronique pour les camions de plus de 3,5 tonnes, géré par la société Ecomouv', dont le contrat a été résilié.",
+     num:"Recettes nettes attendues : près de 890 M€ par an. Coût de l'abandon selon la Cour des comptes : près d'1 Md€ d'indemnisations et près de 10 Md€ de recettes perdues sur 2014-2024.",
+     res:"La Cour des comptes parle d'« échec stratégique » et d'« abandon coûteux ». L'Allemagne applique un système comparable depuis 2005 (voir la fiche étrangère).",
+     sim:"Curseur « Redevance kilométrique poids lourds (modèle allemand) ». 10 % du modèle allemand correspond à peu près au rendement attendu de l'écotaxe.",act:[{l:"Appliquer : niveau de l'écotaxe (≈ 0,9 Md€)",set:{x_maut:10}},{l:"Modèle allemand complet",set:{x_maut:100}}],see:"x_maut",src:["cdc_ecotaxe","de_maut"]},
+    {id:"ttf",o:"fr",fx:["recettes"],t:"Taxer les transactions financières",w:"France, depuis 2012",
+     k:"Une taxe sur les achats d'actions des grandes sociétés françaises, relevée deux fois.",
+     who:"<b>Création</b> : 2012, gouvernement Fillon, UMP (droite). <b>Taux porté à 0,3 %</b> : 2017, sous la présidence Hollande, PS (gauche). <b>Taux porté à 0,4 %</b> : 2025, gouvernement Bayrou, MoDem (centre).",
+     what:"0,4 % du prix d'achat des actions des sociétés françaises de plus d'1 Md€ de capitalisation.",
+     num:"2 630 M€ prévus en 2026 (Voies et moyens, tome I, PLF 2026).",
+     res:"Rendement en hausse avec les relèvements de taux. Le Royaume-Uni taxe tous les achats d'actions à 0,5 % (voir la fiche étrangère).",
+     sim:"Curseur « Taxe sur les achats d'actions (droit de timbre britannique) », qui ajoute la différence avec le modèle britannique.",act:[{l:"Appliquer : modèle britannique (+0,9 Md€)",set:{x_titres:100}}],see:"x_titres",src:["vm1","uk_stamp"]},
+    {id:"surtaxe",o:"fr",fx:["recettes"],t:"Surtaxe des grandes entreprises et contribution des très hauts revenus",w:"France, 2025-2026",
+     k:"Deux prélèvements « exceptionnels » créés pour réduire le déficit, puis reconduits.",
+     who:"Loi de finances 2025 : gouvernement Barnier, LR (droite) avec Renaissance, MoDem et Horizons (centre). Reconduits par la loi de finances 2026.",
+     what:"Surtaxe d'impôt sur les sociétés pour les groupes de plus de 1,5 Md€ de chiffre d'affaires en 2026 ; contribution qui garantit un taux d'imposition minimal de 20 % aux foyers déclarant plus de 250 000 € (personne seule) ou 500 000 € (couple), jusqu'à ce que le déficit passe sous 3 %.",
+     num:"Surtaxe : 8 Md€ prévus en 2025 (Voies et moyens), 7,3 Md€ en 2026 (Sénat). Contribution des hauts revenus : 1,5 Md€ au titre de 2026 (Voies et moyens).",
+     res:"La contribution des hauts revenus est déjà comprise dans le scénario de base. La surtaxe est supposée s'arrêter après 2026, comme le prévoit la loi ; le projet de budget 2027 propose de la prolonger avec des taux plus bas.",
+     sim:"Curseur « Prolonger la surtaxe des grandes entreprises après 2026 ».",act:[{l:"Appliquer : prolonger la surtaxe",set:{x_surtaxe:100}}],see:"x_surtaxe",src:["vm1","senat_312"]},
+    {id:"isf",o:"fr",fx:["recettes"],t:"Remplacer l'ISF par l'IFI et créer la « flat tax »",w:"France, 2018",
+     k:"L'impôt sur la fortune a été limité à l'immobilier, et les revenus du capital taxés à 30 % tout compris.",
+     who:"Gouvernement Philippe, présidence Macron, LREM (centre), loi de finances 2018.",
+     what:"Suppression de l'impôt sur la fortune (ISF), remplacé par l'impôt sur la fortune immobilière (IFI), et prélèvement forfaitaire unique de 30 % sur les dividendes, intérêts et plus-values.",
+     num:"Selon le comité d'évaluation de France Stratégie (2023), le remplacement de l'ISF par l'IFI coûte environ 3,1 Md€ en 2018 et 4,5 Md€ en 2022. Les dividendes déclarés par les ménages passent de 14 Md€ par an (2013-2017) à environ 23 Md€ (2018-2020) ; le comité juge le prélèvement forfaitaire « autofinancé ».",
+     res:"Aucun effet détecté sur l'investissement ou les salaires des entreprises concernées. Retours de contribuables aisés supérieurs aux départs (380 contre 260 par an), mais sur de petits nombres. « Beaucoup de questions restent ouvertes », conclut le comité.",
+     sim:"Curseur « Impôt sur la fortune » avec le modèle « ancien ISF français ».",act:[{l:"Appliquer : rétablir un ISF au rendement de 2017",set:{x_patri_ref:"isf",x_patri:100}}],see:"x_patri",src:["fs_isf","fr_isf"]},
+    {id:"fraude",o:"fr",fx:["recettes"],t:"Renforcer la lutte contre la fraude",w:"France, depuis 2018",
+     k:"Ciblage des contrôles par l'exploitation des données, sanctions renforcées, contrôles des prestations et du travail dissimulé.",
+     who:"Loi du 23 octobre 2018 relative à la lutte contre la fraude, gouvernement Philippe, LREM (centre) ; poursuivie depuis par les gouvernements successifs.",
+     what:"Contrôle fiscal ciblé par l'analyse des données, contrôles automatisés des Caf, lutte de l'Urssaf contre le travail dissimulé.",
+     num:"2025 : 11,4 Md€ encaissés après contrôle fiscal pour 17,1 Md€ notifiés ; 509 M€ de fraudes aux prestations détectées par les Caf ; 1,5 Md€ de redressements pour travail dissimulé, mais seulement environ 150 M€ recouvrés par l'Urssaf.",
+     res:"Les montants détectés progressent, mais l'écart entre sommes réclamées et sommes encaissées reste important, surtout pour le travail dissimulé.",
+     sim:"Catégorie « Lutte contre la fraude ».",act:[{l:"Exemple : +20 % sur les sommes récupérées",set:{t_fraude:20,fr_caf:20,fr_urssaf:20}}],see:"t_fraude",src:["eco_fraude","caf_fraude","urssaf_fraude"]},
+
+    {id:"canada",o:"et",fx:["economies"],t:"Revoir toutes les dépenses de l'État",w:"Canada, 1994-1998",
+     k:"La « revue des programmes » : chaque ministère a dû justifier chacune de ses missions. Le déficit fédéral a disparu en quatre ans.",
+     who:"Gouvernement Chrétien, ministre des Finances Paul Martin, Parti libéral du Canada (centre).",
+     what:"Six questions posées à chaque programme (intérêt public, rôle de l'État, possibilité de le confier à d'autres, efficacité, coût), coupes décidées ministère par ministère, budget de 1995.",
+     num:"Déficit fédéral d'environ 5,3 % du PIB vers 1993, premier excédent en 1997-98 (le premier depuis 28 ans). Dépenses de programmes : 16,8 % du PIB en 1993-94, 12,1 % en 1999-2000. 45 000 postes de fonctionnaires fédéraux en moins (−19 % en cinq ans). Dette fédérale : près de 70 % du PIB en 1995-96, 29,8 % en 2007-08.",
+     res:"Réussite budgétaire durable, aidée par une forte croissance et la baisse des taux à la fin des années 1990 ; une partie de l'effort a reposé sur la baisse des transferts aux provinces. Le récit vient d'une haute fonctionnaire qui a dirigé l'opération.",
+     sim:"Pas de bouton : l'équivalent porterait sur toutes les missions de l'État. Une baisse de 10 % des missions de l'État serait du même ordre que l'effort canadien.",act:[],see:null,src:["ca_bourgon"]},
+    {id:"suede",o:"et",fx:["economies","recettes"],t:"Assainir en quatre ans puis graver des règles",w:"Suède, 1994-1998",
+     k:"Après une crise bancaire, un programme de redressement mêlant économies et hausses d'impôts, suivi de règles budgétaires durables.",
+     who:"Gouvernements Carlsson puis Persson, Parti social-démocrate (centre-gauche), avec l'appui du Parti du centre à partir de 1995.",
+     what:"Programme de consolidation de 126 milliards de couronnes, puis plafonds de dépenses votés pour trois ans et objectif d'excédent public.",
+     num:"Déficit public de 12,3 % du PIB en 1993, excédent de 1,6 % prévu dès 1998. Dette de l'État au plus haut à 84 % du PIB en 1994-95 ; dette publique ramenée depuis d'environ 75 % à 35 % du PIB selon Andersson et Jonung.",
+     res:"Le cadre (plafonds de dépenses, objectif d'excédent, conseil budgétaire) est souvent cité en exemple ; il a été adopté par des gouvernements de gauche puis de droite.",
+     sim:"Pas de bouton : le programme mêlait de nombreuses mesures.",act:[],see:null,src:["se_budget98","se_jonung"]},
+    {id:"hartz",o:"et",fx:["croissance","economies"],t:"Réformer le marché du travail (lois Hartz)",w:"Allemagne, 2003-2005",
+     k:"Fusion de l'allocation chômage de longue durée et de l'aide sociale, accompagnement renforcé, emplois à temps partiel exonérés (« mini-jobs »).",
+     who:"Gouvernement Schröder, SPD (centre-gauche) et Verts (écologistes).",
+     what:"Quatre lois (Hartz I à IV), dont la dernière (2005) a créé une allocation forfaitaire unique pour les chômeurs de longue durée et les bénéficiaires de l'aide sociale aptes au travail.",
+     num:"Taux de chômage : 13,0 % en 2005, 8,6 % en 2010 (Bundesagentur für Arbeit, rapporté aux salariés).",
+     res:"La part de la baisse due aux réformes reste discutée. L'IAB montre que la hausse de 2005 était en partie statistique : Hartz IV a fait entrer dans les chiffres des bénéficiaires de l'aide sociale déjà sans emploi.",
+     sim:"Curseur « Augmenter la population active » pour l'effet sur l'emploi ; curseurs RSA et allocations chômage pour la dépense.",act:[],see:"x_popact",src:["ba_hartz","iab_hartz"]},
+    {id:"rente67",o:"et",fx:["croissance","economies"],t:"Retraite à 67 ans",w:"Allemagne, 2007",
+     k:"L'âge légal monte progressivement de 65 à 67 ans, de 2012 à 2029.",
+     who:"Grande coalition Merkel : CDU/CSU (centre-droit) et SPD (centre-gauche), loi de 2007.",
+     what:"Hausse d'un mois par an puis de deux mois par an de l'âge légal, à partir de la génération 1947 ; 67 ans pour les personnes nées à partir de 1964.",
+     num:"Objectif inscrit dans le projet de loi : limiter le taux de cotisation retraite à 21,9 % en 2030 et maintenir un taux de remplacement d'au moins 43 %.",
+     res:"Mise en œuvre sans retour en arrière ; un départ à 63 ans sans décote a toutefois été ouvert en 2014 pour les longues carrières.",
+     sim:"Curseur « Reculer l'âge légal d'un an de plus (65 ans) », qui transpose un an de plus en France d'après le COR.",act:[{l:"Appliquer : un an de plus en France",set:{x_aod:1}}],see:"x_aod",src:["de_rente67","cor26"]},
+    {id:"danemark",o:"et",fx:["croissance","economies"],t:"Indexer l'âge de départ sur l'espérance de vie",w:"Danemark, depuis 2006",
+     k:"L'âge de départ suit automatiquement les gains d'espérance de vie, sans nouvelle loi à chaque fois.",
+     who:"Accord sur la protection sociale de 2006 : gouvernement Fogh Rasmussen, Venstre (libéraux, centre-droit) et Conservateurs (droite), avec les sociaux-démocrates (centre-gauche), le Parti populaire danois (droite nationaliste) et les sociaux-libéraux (centre).",
+     what:"L'âge légal monte d'au plus un an tous les cinq ans pour garder constante la durée moyenne de retraite.",
+     num:"Âge légal porté de 65 à 67 ans, projeté à 73 ans vers 2060, le plus élevé prévu dans l'OCDE. Sans cette indexation après 2030, l'OCDE projette des déficits durables.",
+     res:"Le taux d'emploi des 55-64 ans a nettement augmenté depuis 2014, tout en restant derrière la Norvège et la Suède.",
+     sim:"Curseur « Reculer l'âge légal d'un an de plus (65 ans) ».",act:[],see:"x_aod",src:["oecd_dk"]},
+    {id:"efact",o:"et",fx:["recettes"],t:"Rendre la facture électronique obligatoire",w:"Italie, 2019",
+     k:"Toutes les factures entre entreprises passent par une plateforme publique, ce qui complique la fraude à la TVA.",
+     who:"Loi de budget pour 2018, gouvernement Gentiloni, Parti démocrate (centre-gauche) ; entrée en vigueur en janvier 2019 sous le gouvernement Conte I, Mouvement 5 étoiles (populiste) et Ligue (droite nationaliste).",
+     what:"Obligation de facture électronique transmise à l'administration fiscale, en complément d'autres mesures (paiement direct de la TVA par l'acheteur public).",
+     num:"Écart entre TVA due et TVA perçue : 32,0 Md€ en 2018, environ 27 Md€ en 2019 (ministère italien des Finances), une baisse que le ministère attribue à l'ensemble de ces mesures sans isoler la facture électronique.",
+     res:"La France a déjà voté la mesure (loi de finances 2024, article 91) : réception obligatoire pour toutes les entreprises et émission pour les grandes au 1er septembre 2026, pour les PME en 2027. Son écart de TVA est bien plus faible que celui de l'Italie : 5,6 % (12,1 Md€) contre 15 % en 2023 selon la Commission européenne. Le gain possible est donc plus limité.",
+     sim:"Pas de curseur : la mesure est déjà votée en France, et son gain n'a pas été chiffré officiellement.",act:[],see:null,src:["it_mef","ec_vatgap"]},
+    {id:"superbonus",o:"et",fx:["contre"],t:"Contre-exemple : le « Superbonus » de rénovation",w:"Italie, 2020-2023",
+     k:"Un crédit d'impôt de 110 % des travaux de rénovation énergétique : son coût a explosé bien au-delà des prévisions.",
+     who:"Décret « Relance » de 2020, gouvernement Conte II, Mouvement 5 étoiles (populiste) et Parti démocrate (centre-gauche) ; prolongé ensuite.",
+     what:"L'État remboursait plus que le coût des travaux, sous forme de crédits d'impôt revendables, sans plafond global.",
+     num:"Environ 170 Md€ sur 2020-2023 selon l'Ufficio parlamentare di bilancio, avec un poids sur le déficit d'environ 0,5 % du PIB par an en 2021-2023, puis 1,8 % ensuite.",
+     res:"L'office budgétaire juge l'écart entre prévisions et coût réel « sans précédent ». Leçon : une aide ouverte, sans plafond ni ciblage, peut coûter beaucoup plus qu'elle ne rapporte en activité.",
+     sim:"Pas de curseur : c'est un exemple de ce qu'il faut éviter.",act:[],see:null,src:["upb_superbonus"]},
+    {id:"maut",o:"et",fx:["recettes"],t:"Redevance kilométrique poids lourds",w:"Allemagne, depuis 2005",
+     k:"Les camions paient au kilomètre sur les autoroutes et les routes fédérales, selon leurs émissions.",
+     who:"Loi de 2002, appliquée en 2005 : gouvernement Schröder, SPD (centre-gauche) et Verts. Étendue aux 40 000 km de routes fédérales en 2018 : gouvernement Merkel, CDU/CSU et SPD. Modulée selon le CO2 en 2023 : gouvernement Scholz, SPD, Verts et libéraux (FDP).",
+     what:"Péage électronique pour les camions de plus de 3,5 tonnes depuis juillet 2024.",
+     num:"Environ 13,4 Md€ de recettes en 2025 (ministère fédéral des Transports), soit 0,30 % du PIB allemand.",
+     res:"Recette stable, affectée aux infrastructures. Le trafic de transit élevé en Allemagne rend la transposition à la France incertaine.",
+     sim:"Curseur « Redevance kilométrique poids lourds (modèle allemand) ».",act:[{l:"Appliquer : modèle allemand (9,1 Md€)",set:{x_maut:100}}],see:"x_maut",src:["de_maut","de_pib"]},
+    {id:"alcool",o:"et",fx:["recettes"],t:"Taxer l'alcool, vin compris, selon son degré",w:"Royaume-Uni",
+     k:"Des accises élevées sur toutes les boissons alcoolisées, réformées en 2023 pour taxer selon le degré d'alcool.",
+     who:"Accises anciennes ; réforme de 2023, gouvernement Sunak, Parti conservateur (droite).",
+     what:"Taxe par litre d'alcool pur, quel que soit le type de boisson.",
+     num:"12,4 Md£ en 2025-2026 (HMRC), 0,41 % du PIB britannique ; transposé à la France, 7,5 Md€ de plus que les taxes françaises actuelles.",
+     res:"Objectif de santé publique autant que de recette ; le rendement baisse si la consommation recule.",
+     sim:"Curseur « Accises sur l'alcool (niveau britannique) ».",act:[{l:"Appliquer : niveau britannique",set:{x_alc:100}}],see:"x_alc",src:["uk_hmrc","ccss_rec"]},
+    {id:"apd",o:"et",fx:["recettes"],t:"Taxer les billets d'avion",w:"Royaume-Uni, depuis 1994",
+     k:"Une taxe sur chaque passager au départ, plus forte pour les vols longs et les classes premium.",
+     who:"Créée en 1994, gouvernement Major, Parti conservateur (droite).",
+     what:"Montant par passager selon la distance et la classe de voyage.",
+     num:"4,6 Md£ en 2025-2026 (HMRC) ; transposé à la France, 3,3 Md€ de plus que la taxe française actuelle (environ 1,3 Md€ depuis son triplement en 2025).",
+     res:"Depuis la hausse française de 2025, le trafic aérien progresse moins vite en France que dans le reste de l'Europe, selon le ministère de la Transition écologique.",
+     sim:"Curseur « Taxe sur les billets d'avion (niveau britannique) ».",act:[{l:"Appliquer : niveau britannique",set:{x_avion:100}}],see:"x_avion",src:["uk_hmrc","fr_tsba"]},
+    {id:"stamp",o:"et",fx:["recettes"],t:"Taxer tous les achats d'actions",w:"Royaume-Uni",
+     k:"Un droit de timbre de 0,5 % sur tout achat d'actions britanniques, quelle que soit la taille de l'entreprise.",
+     who:"Droit de timbre très ancien ; sa version électronique (SDRT) a été créée en 1986, gouvernement Thatcher, Parti conservateur (droite).",
+     what:"0,5 % du prix d'achat des actions de sociétés britanniques.",
+     num:"3,2 Md£ en 2023-2024 (HMRC), 0,12 % du PIB ; transposé à la France, 0,9 Md€ de plus que la taxe française sur les transactions financières.",
+     res:"Rendement régulier ; risque de déplacement des transactions vers des produits non taxés.",
+     sim:"Curseur « Taxe sur les achats d'actions (droit de timbre britannique) ».",act:[{l:"Appliquer : modèle britannique",set:{x_titres:100}}],see:"x_titres",src:["uk_stamp"]},
+    {id:"rente",o:"et",fx:["recettes"],t:"Taxer les profits exceptionnels des banques et de l'énergie",w:"Espagne, 2023-2024",
+     k:"Un prélèvement temporaire sur le chiffre d'affaires des grandes banques et des grands énergéticiens, quand les taux et les prix de l'énergie ont flambé.",
+     who:"Loi 38/2022, gouvernement Sánchez, PSOE (centre-gauche) et Unidas Podemos (gauche radicale).",
+     what:"Prélèvement de 4,8 % sur certains revenus des grandes banques et de 1,2 % sur le chiffre d'affaires des grands groupes énergétiques ; remplacé pour les banques par un impôt progressif en 2025.",
+     num:"Recettes 2024 : banques 1 695 M€, énergie 1 164 M€, soit 2 859 M€ (gouvernement espagnol), 0,18 % du PIB ; transposé à la France, 5,5 Md€.",
+     res:"Rendement lié à des profits exceptionnels, donc temporaire ; contesté par les entreprises concernées.",
+     sim:"Curseur « Prélèvement temporaire sur les banques et l'énergie (modèle espagnol) ».",act:[{l:"Appliquer : modèle espagnol",set:{x_rente:100}}],see:"x_rente",src:["es_grav","es_pib23"]},
+    {id:"fortune",o:"et",fx:["recettes"],t:"Impôt sur les grandes fortunes",w:"Espagne, Norvège, Suisse",
+     k:"Trois pays comparables taxent chaque année le patrimoine des plus aisés.",
+     who:"<b>Espagne</b> : impôt de solidarité sur les grandes fortunes, loi 38/2022, gouvernement Sánchez, PSOE (centre-gauche) et Unidas Podemos (gauche radicale). <b>Norvège et Suisse</b> : impôts anciens, maintenus par des gouvernements de gauche comme de droite.",
+     what:"Espagne : impôt sur les patrimoines nets de plus de 3 M€. Norvège et Suisse : impôts larges, dus dès des patrimoines moyens.",
+     num:"Espagne : 623,6 M€ en 2023, payés par 12 010 contribuables. En part de PIB : 0,13 % pour l'impôt espagnol de solidarité, 0,59 % en Norvège, 1,11 % en Suisse.",
+     res:"Rendement très variable selon le seuil ; risque de départs de contribuables, que les rendements étrangers intègrent déjà chez eux mais pas chez nous.",
+     sim:"Curseur « Impôt sur la fortune », avec le choix du pays de référence.",act:[{l:"Appliquer : modèle espagnol",set:{x_patri_ref:"itsgf",x_patri:100}},{l:"Moyenne des trois pays",set:{x_patri_ref:"moy3",x_patri:100}}],see:"x_patri",src:["es_itsgf","no_formue","ch_fortune"]}
+  ];
+  let mFilt={o:"all",e:"all"};
+  function paintMeas(){
+    const pass=m=>(mFilt.o==="all"||m.o===mFilt.o)&&(mFilt.e==="all"||m.fx.includes(mFilt.e));
+    const TAG={croissance:"Croissance et emploi",recettes:"Recettes",economies:"Économies",contre:"Contre-exemple"};
+    const card=m=>`<article class="mcard" id="mc-${m.id}">
+      <div class="mh"><span class="mt">${m.t}</span><span class="mw">${m.w}</span></div>
+      <div class="mtags">${m.fx.map(f=>`<span class="mtag ${f}">${TAG[f]}</span>`).join("")}</div>
+      <p class="mk" style="margin:0">${m.k}</p>
+      <div class="mwho">${m.who}</div>
+      <details><summary>Lire la fiche complète</summary><div class="mbody">
+        <div><b>Ce qui a été fait</b>${m.what}</div>
+        <div><b>Chiffrage officiel</b>${m.num}</div>
+        <div><b>Résultats et limites</b>${m.res}</div>
+        <div><b>Dans le simulateur</b>${m.sim}</div>
+        <div class="src"><b>Sources</b>${m.src.filter(k=>S[k]).map(k=>`<a href="${S[k][1]}" target="_blank" rel="noopener">${S[k][0]}</a>`).join(" · ")}</div>
+      </div></details>
+      ${m.act.length||m.see?`<div class="mact">${m.act.map((a,i)=>`<button type="button" class="${i===0?"pri":""}" data-ma="${m.id}" data-i="${i}">${a.l}</button>`).join("")}${m.see?`<button type="button" data-ms="${m.see}">Voir le curseur</button>`:""}</div><div class="mmsg" id="mm-${m.id}" aria-live="polite"></div>`:""}
+    </article>`;
+    const fr0=MEAS.filter(m=>m.o==="fr"&&pass(m)),et=MEAS.filter(m=>m.o==="et"&&pass(m));
+    $("mlist").innerHTML=(fr0.length?`<div class="mgroup"><h3>Mesures appliquées en France (${fr0.length})</h3><div class="mgrid">${fr0.map(card).join("")}</div></div>`:"")
+      +(et.length?`<div class="mgroup"><h3>Mesures appliquées à l'étranger (${et.length})</h3><div class="mgrid">${et.map(card).join("")}</div></div>`:"")
+      +(!fr0.length&&!et.length?'<p class="empty">Aucune mesure ne correspond à ces filtres.</p>':"");
+  }
+  function showCtrl(id){
+    const el=$(id);if(!el)return;const x=ALL.find(z=>z.id===id);
+    if(x&&x.sector){const ln=$("ln-"+x.sector.id);if(ln&&ln.hidden)$("tg-"+x.sector.id).click()}
+    const c=el.closest(".ctrl")||el;c.scrollIntoView({behavior:"smooth",block:"center"});
+    c.style.transition="background .6s";c.style.background="var(--band)";setTimeout(()=>c.style.background="",1600);
+  }
+  document.querySelectorAll("#meas .mfilt").forEach(g=>g.addEventListener("click",e=>{const b=e.target.closest("button");if(!b)return;
+    g.querySelectorAll("button").forEach(z=>z.classList.toggle("on",z===b));
+    if(b.dataset.mo)mFilt.o=b.dataset.mo;if(b.dataset.me)mFilt.e=b.dataset.me;paintMeas()}));
+  $("mlist").addEventListener("click",e=>{
+    const a=e.target.closest("[data-ma]");
+    if(a){const m=MEAS.find(z=>z.id===a.dataset.ma),act=m.act[+a.dataset.i];
+      Object.entries(act.set).forEach(([k,v])=>{const el=$(k);if(!el)return;el.value=v;if(k==="x_patri_ref")el.dispatchEvent(new Event("change"))});
+      render();$("mm-"+m.id).textContent="Appliqué à vos réglages. Le résultat se lit dans le tableau de bord.";return}
+    const sbtn=e.target.closest("[data-ms]");if(sbtn)showCtrl(sbtn.dataset.ms);
+  });
+  paintMeas();
 
   ALL.concat(MACRO).forEach(x=>$(x.id).addEventListener("input",()=>render()));
   function setPreset(k){const pr=PRESETS[k];ALL.forEach(x=>$(x.id).value=pr[x.id]||0);render()}

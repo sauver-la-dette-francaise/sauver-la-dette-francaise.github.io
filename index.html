@@ -4,19 +4,19 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Simulateur de dette française</title>
-<meta name="description" content="À législation actuelle, la dette française approcherait 200 % du PIB en 2045. Le budget ligne par ligne, chiffres officiels sourcés : où trouver environ 220 Md€ par an pour la stabiliser ?">
+<meta name="description" content="À législation actuelle, la dette française approcherait 220 % du PIB en 2045. Le budget ligne par ligne, chiffres officiels sourcés : où trouver environ 240 Md€ par an pour la stabiliser ?">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="fr_FR">
 <meta property="og:site_name" content="Simulateur de dette française">
-<meta property="og:title" content="Où trouver 220 milliards par an ?">
+<meta property="og:title" content="Où trouver 240 milliards par an ?">
 <meta property="og:description" content="Le budget de la France en 108 lignes, chiffres officiels sourcés. Faites vos choix et voyez qui gagne, qui perd, et ce que devient la dette jusqu'en 2045.">
 <meta property="og:url" content="https://sauver-la-dette-francaise.github.io/">
 <meta property="og:image" content="https://sauver-la-dette-francaise.github.io/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Courbe de la dette publique : 199 % du PIB en 2045 à législation actuelle, 119 % avec environ 220 Md€ d'effort direct par an.">
+<meta property="og:image:alt" content="Courbe de la dette publique : 220 % du PIB en 2045 à législation actuelle, 118 % avec environ 240 Md€ d'effort direct par an.">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Où trouver 220 milliards par an ?">
+<meta name="twitter:title" content="Où trouver 240 milliards par an ?">
 <meta name="twitter:description" content="Le budget de la France en 108 lignes, chiffres officiels sourcés.">
 <meta name="twitter:image" content="https://sauver-la-dette-francaise.github.io/og-image.png">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
@@ -55,6 +55,14 @@
     </div>
   </div>
 
+  <details class="panel meas" id="meas">
+    <summary><span class="ms-t">Mesures éprouvées en France et à l'étranger</span><span class="ms-s">23 mesures appliquées et chiffrées : ce qu'elles ont rapporté ou coûté, qui les a portées, et comment les tester ici</span></summary>
+    <p class="sintro">Chaque fiche décrit une mesure réellement appliquée, avec son chiffrage officiel, ses résultats observés et ses limites. Elle indique le gouvernement et les partis qui l'ont portée, avec leur orientation telle qu'on la décrit couramment. Quand le simulateur a un curseur correspondant, un bouton l'applique à vos réglages. Les mesures étrangères sont transposées en part de PIB et ne prédisent pas ce qui se passerait en France.</p>
+    <div class="mfilt" role="group" aria-label="Filtrer par origine"><span>Origine</span><button type="button" data-mo="all" class="on">Toutes</button><button type="button" data-mo="fr">France</button><button type="button" data-mo="et">Étranger</button></div>
+    <div class="mfilt" role="group" aria-label="Filtrer par effet"><span>Effet</span><button type="button" data-me="all" class="on">Tous</button><button type="button" data-me="croissance">Croissance et emploi</button><button type="button" data-me="recettes">Recettes</button><button type="button" data-me="economies">Économies</button><button type="button" data-me="contre">Contre-exemples</button></div>
+    <div id="mlist"></div>
+  </details>
+
   <div class="grid">
     <div class="left" id="levers"></div>
 
@@ -64,8 +72,8 @@
         <div class="kpi"><div class="lab">Dette en 2045</div><div class="val" id="k45"></div><div id="ktrend"></div></div>
         <div class="kpi"><div class="lab">Pic</div><div class="val" id="kpk"></div><div class="sub" id="kpky"></div></div>
         <div class="kpi"><div class="lab">Intérêts en 2045</div><div class="val" id="kint"></div><div class="sub" id="kints"></div></div>
-        <div class="kpi"><div class="lab">Effet sur le PIB en 2030</div><div class="val" id="kpib30"></div><div class="sub" id="kpib30s"></div></div>
-        <div class="kpi"><div class="lab">Effet sur le PIB en 2035</div><div class="val" id="kpib35"></div><div class="sub" id="kpib35s"></div></div>
+        <div class="kpi"><div class="lab">Effet sur le PIB en 2030 (volume)</div><div class="val" id="kpib30"></div><div class="sub" id="kpib30s"></div></div>
+        <div class="kpi"><div class="lab">Effet sur le PIB en 2035 (volume)</div><div class="val" id="kpib35"></div><div class="sub" id="kpib35s"></div></div>
       </div>
 
       <section class="panel" aria-label="Trajectoire">
@@ -74,7 +82,9 @@
         <div class="legend">
           <span><i class="sw" style="background:var(--accent)"></i>Vos choix</span>
           <span><i class="sw" style="background:var(--ghost)"></i>Législation actuelle</span>
+          <span><i class="sw" style="background:var(--accent);opacity:.3;height:10px"></i>Fourchette selon les hypothèses</span>
         </div>
+        <p class="need" id="bandtxt"></p>
       </section>
 
       <section class="panel" aria-label="Bilan">
@@ -82,6 +92,12 @@
         <div class="bars" id="bars"></div>
         <div class="total"><span>Solde primaire 2033</span><span class="v" id="pb33"></span></div>
         <div class="need" id="need"></div>
+      </section>
+
+      <section class="panel" aria-label="Effet par niveau de vie">
+        <h2>Effet sur le revenu des ménages, selon leur niveau de vie</h2>
+        <div class="bars" id="dec"></div>
+        <p class="need">Variation du revenu disponible (après impôts directs et prestations) due aux curseurs de pensions, chômage, minima sociaux, prime d'activité, prestations familiales, aides au logement, impôt sur le revenu et CSG, une fois appliqués. Les ménages sont classés par niveau de vie : D1 = les 10 % les plus modestes. Ne compte pas la TVA, les autres taxes, ni les services publics (santé, école…), faute de répartition officielle. Source : Drees, Minima sociaux et prestations sociales, édition 2025, fiche 02, tableau 1 (données 2022).</p>
       </section>
 
       <section class="panel" aria-label="Personnes concernées">
