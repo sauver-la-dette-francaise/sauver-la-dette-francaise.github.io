@@ -874,7 +874,7 @@
      up:"Plus de contrôles et de recouvrement. Les redressements (1,5 Md€) sont dix fois plus élevés que les sommes recouvrées : améliorer le recouvrement compte autant que contrôler plus.",
      src:"urssaf_fraude",note:"Près de 150 M€ recouvrés en 2025, dont environ 100 M€ pour le travail dissimulé ; redressements pour travail dissimulé : plus de 1,5 Md€ (dossier de presse Urssaf, p. 3 et 8)."}
    ]},
-  {id:"etr",name:"Nouvelles recettes inspirées de l'étranger",kind:"rec",min:0,max:100,step:10,
+  {id:"etr",hide:true,name:"Nouvelles recettes inspirées de l'étranger",kind:"rec",min:0,max:100,step:10,
    base:"Cinq prélèvements qui existent ailleurs en Europe, transposés à la France : jusqu'à 26 Md€ par an au total",
    intro:"Chaque ligne prend le rendement officiel d'un prélèvement étranger, le rapporte au PIB de ce pays, l'applique au PIB français (3 068 Md€ en 2026) et retranche ce que l'équivalent français rapporte déjà. 100 % = adopter la mesure au niveau du pays de référence. C'est une transposition, pas une prévision : les comportements, l'assiette et les règles françaises changeraient le rendement réel.",
    tr:v=>`${P(v)} du niveau du pays de référence.`,
@@ -1118,6 +1118,7 @@
         ${x.up?`<div><b>Si on augmente</b>${x.up}</div>`:""}
         ${srcHtml(x.src,x.note)}</div></details></div>`;
   SECTORS.forEach((s,k)=>{
+    if(s.hide)return;
     const sec=document.createElement("section");sec.className="panel";
     sec.innerHTML=`<div class="shead"><h3>${s.name}</h3><span class="tot zero" id="t-${s.id}"></span></div><span class="sbase">${s.base}</span>
       <div class="master"><div class="top"><label for="m-${s.id}">Curseur général</label><output id="mo-${s.id}"></output></div>
@@ -1156,6 +1157,7 @@
 
   // Curseur général : décale toutes les sous-lignes du même écart
   SECTORS.forEach(s=>{
+    if(s.hide)return;
     const m=$("m-"+s.id);
     m.addEventListener("input",()=>{
       const p=read(),delta=parseFloat(m.value)-sectorAvg(s,p);
@@ -1259,6 +1261,7 @@
     const p=read();
     ALL.forEach(x=>{$("o-"+x.id).textContent=fmtV(x,p[x.id]);$("e-"+x.id).innerHTML=lineEffect(x,p[x.id])});
     SECTORS.forEach(s=>{
+      if(s.hide)return;
       const avg=sectorAvg(s,p),t=s.lines.reduce((a,x)=>a+sw(x,p[x.id]),0),z=Math.abs(avg)<1e-9;
       if(fromMaster!==s.id)$("m-"+s.id).value=clamp(snap(avg,s.step),s.min,s.max);
       $("mo-"+s.id).textContent=z?"0 %":P(Math.round(avg*10)/10);
@@ -1372,7 +1375,7 @@
     <p><strong>Octobre 2026 : effets sur l'activité.</strong> Jusqu'ici, la plupart des mesures étaient comptées sans effet sur l'activité. Avec les variantes officielles, un même effort direct améliore beaucoup moins la dette : les scénarios d'exemple ont dû être portés d'environ 140 à 220-270 Md€ d'effort direct par an pour stabiliser la dette, une fois comptés aussi les effets sur les prix et le lien entre dette et taux. Avec le calcul comptable, environ 140 Md€ suffisent.</p>
     <p><strong>Santé.</strong> Les soins de ville sont détaillés sur le champ du régime général (la grande majorité des assurés), avant les remises des laboratoires, d'après les Comptes de la Sécurité sociale d'octobre 2026 ; les hôpitaux et établissements médico-sociaux reprennent l'objectif 2026 voté. Les autres régimes d'assurance maladie et les remises ne sont donc pas inclus dans les lignes de soins de ville.</p>
     <p><strong>Leviers de croissance.</strong> Deux curseurs reprennent les variantes « structurelles » du modèle Mésange : une hausse de la population active et une hausse de l'efficacité du travail, chacune atteinte progressivement en 5 ans. Ils augmentent le PIB en volume (+0,61 % à 10 ans pour 1 %) mais améliorent peu le solde public, car l'économie met plusieurs années à absorber le choc. Ils font aussi baisser les prix (environ −0,9 à −1,1 % à 10 ans), ce qui réduit la valeur en euros du PIB : avec les effets sur les prix activés, leur gain sur le ratio de dette est donc faible. D'autres curseurs soutiennent aussi la croissance : le recul de l'âge de départ (COR), une hausse de l'investissement public ou une baisse des cotisations patronales, mais ces deux derniers coûtent de l'argent.</p>
-    <p><strong>Nouvelles recettes inspirées de l'étranger.</strong> Comme pour l'impôt sur la fortune, ces lignes transposent le rendement officiel d'un prélèvement existant (Allemagne, Royaume-Uni, Espagne) en part de PIB, puis retranchent le rendement de l'équivalent français quand il existe. Les années de référence diffèrent légèrement (2023 à 2026) ; elles sont indiquées dans chaque fiche.</p>
+    <p><strong>Nouvelles recettes inspirées de l'étranger.</strong> Les cinq prélèvements étrangers de la rubrique « Mesures éprouvées » (poids lourds, alcool, billets d'avion, achats d'actions, banques et énergie) ont leur curseur dans leur fiche. Comme pour l'impôt sur la fortune, ils transposent le rendement officiel d'un prélèvement existant (Allemagne, Royaume-Uni, Espagne) en part de PIB, puis retranchent le rendement de l'équivalent français quand il existe. Les années de référence diffèrent légèrement (2023 à 2026) ; elles sont indiquées dans chaque fiche.</p>
     <p><strong>Impôt sur la fortune.</strong> Aucune administration française n'a publié de chiffrage d'un impôt sur les très hauts patrimoines. Le curseur reprend donc le rendement, en part du PIB, des impôts sur la fortune existant en Espagne, en Norvège et en Suisse (sources officielles nationales), ou de l'ancien ISF français, et l'applique au PIB français. C'est une transposition, pas une prévision : le rendement réel dépendrait du seuil, du taux, des exonérations et des comportements en France.</p>
     <p><strong>Vérification d'octobre 2026.</strong> Chaque montant a été recoupé avec le document source (loi de finances, comptes de la Sécurité sociale, Cnaf, Drees, Voies et moyens, annexes du budget de la Sécurité sociale, COR, Cour des comptes, Insee, Sénat). Corrections faites : cotisations de retraite retirées de la ligne police et gendarmerie (−8,2 Md€), minimum vieillesse aligné sur la Drees (4,1 Md€), montant des remises des laboratoires, coût de la suspension de la réforme 2023. Pour les niches fiscales, la fiche indique la fiabilité donnée par l'administration : quatre ne sont connues qu'en « ordre de grandeur ». Limite restante : les autres missions de l'État (action extérieure, écologie, agriculture, culture…) comprennent encore les cotisations de retraite de leurs agents, faute de montant publié pour chacune ; l'économie y est donc un peu surestimée.</p>
     <p><strong>Années et périmètres.</strong> Les crédits des missions de l'État sont ceux votés par la loi de finances du 19 février 2026 (état B). Ils comprennent les cotisations de retraite des agents ; pour l'école, la justice et les armées, celles-ci sont retirées à l'aide des montants publiés par le Sénat, pour ne pas les compter deux fois avec les retraites. Le détail de certaines lignes (prime d'activité, aide aux apprentis, allocations de solidarité) vient du projet de loi, la loi n'étant votée que par programme. Les pensions par régime sont les montants 2023 publiés par la Drees, arrondis au milliard ; la retraite du combattant et les autres pensions versées par l'État au titre de l'intervention sociale (1 Md€) n'ont pas de curseur.</p>
@@ -1545,8 +1548,10 @@
      sim:"Curseur « Impôt sur la fortune », avec le choix du pays de référence.",act:[{l:"Appliquer : modèle espagnol",set:{x_patri_ref:"itsgf",x_patri:100}},{l:"Moyenne des trois pays",set:{x_patri_ref:"moy3",x_patri:100}}],see:"x_patri",src:["es_itsgf","no_formue","ch_fortune"]}
   ];
   let mFilt={o:"all",e:"all"};
+  const MCTRL={maut:"x_maut",alcool:"x_alc",apd:"x_avion",stamp:"x_titres",rente:"x_rente"};
   function paintMeas(){
-    const pass=m=>(mFilt.o==="all"||m.o===mFilt.o)&&(mFilt.e==="all"||m.fx.includes(mFilt.e));
+    if($("mlist").dataset.built){applyMeasFilter();return}
+    const pass=()=>true,pass0=m=>(mFilt.o==="all"||m.o===mFilt.o)&&(mFilt.e==="all"||m.fx.includes(mFilt.e));
     const TAG={croissance:"Croissance et emploi",recettes:"Recettes",economies:"Économies",contre:"Contre-exemple"};
     const card=m=>`<article class="mcard" id="mc-${m.id}">
       <div class="mh"><span class="mt">${m.t}</span><span class="mw">${m.w}</span></div>
@@ -1560,16 +1565,25 @@
         <div><b>Dans le simulateur</b>${m.sim}</div>
         <div class="src"><b>Sources</b>${m.src.filter(k=>S[k]).map(k=>`<a href="${S[k][1]}" target="_blank" rel="noopener">${S[k][0]}</a>`).join(" · ")}</div>
       </div></details>
-      ${m.act.length||m.see?`<div class="mact">${m.act.map((a,i)=>`<button type="button" class="${i===0?"pri":""}" data-ma="${m.id}" data-i="${i}">${a.l}</button>`).join("")}${m.see?`<button type="button" data-ms="${m.see}">Voir le curseur</button>`:""}</div><div class="mmsg" id="mm-${m.id}" aria-live="polite"></div>`:""}
+      ${MCTRL[m.id]?`<div class="mctrl">${ctrlHtml(ALL.find(z=>z.id===MCTRL[m.id]),ALL.find(z=>z.id===MCTRL[m.id]).sector)}</div>`:""}
+      ${m.act.length||(m.see&&!MCTRL[m.id])?`<div class="mact">${m.act.map((a,i)=>`<button type="button" class="${i===0?"pri":""}" data-ma="${m.id}" data-i="${i}">${a.l}</button>`).join("")}${m.see&&!MCTRL[m.id]?`<button type="button" data-ms="${m.see}">Voir le curseur</button>`:""}</div><div class="mmsg" id="mm-${m.id}" aria-live="polite"></div>`:""}
     </article>`;
-    const fr0=MEAS.filter(m=>m.o==="fr"&&pass(m)),et=MEAS.filter(m=>m.o==="et"&&pass(m));
-    $("mlist").innerHTML=(fr0.length?`<div class="mgroup"><h3>Mesures appliquées en France (${fr0.length})</h3><div class="mgrid">${fr0.map(card).join("")}</div></div>`:"")
-      +(et.length?`<div class="mgroup"><h3>Mesures appliquées à l'étranger (${et.length})</h3><div class="mgrid">${et.map(card).join("")}</div></div>`:"")
-      +(!fr0.length&&!et.length?'<p class="empty">Aucune mesure ne correspond à ces filtres.</p>':"");
+    const fr0=MEAS.filter(m=>m.o==="fr"),et=MEAS.filter(m=>m.o==="et");
+    $("mlist").innerHTML=`<div class="mgroup" id="mg-fr"><h3>Mesures appliquées en France (<span></span>)</h3><div class="mgrid">${fr0.map(card).join("")}</div></div>`
+      +`<div class="mgroup" id="mg-et"><h3>Mesures appliquées à l'étranger (<span></span>)</h3><div class="mgrid">${et.map(card).join("")}</div></div>`
+      +'<p class="empty" id="mg-none" hidden>Aucune mesure ne correspond à ces filtres.</p>';
+    $("mlist").dataset.built="1";applyMeasFilter();
+  }
+  function applyMeasFilter(){
+    const pass=m=>(mFilt.o==="all"||m.o===mFilt.o)&&(mFilt.e==="all"||m.fx.includes(mFilt.e));
+    let tot=0;["fr","et"].forEach(o=>{let n=0;MEAS.filter(m=>m.o===o).forEach(m=>{const ok=pass(m);$("mc-"+m.id).hidden=!ok;if(ok)n++});
+      $("mg-"+o).hidden=!n;$("mg-"+o).querySelector("h3 span").textContent=n;tot+=n});
+    $("mg-none").hidden=!!tot;
   }
   function showCtrl(id){
     const el=$(id);if(!el)return;const x=ALL.find(z=>z.id===id);
-    if(x&&x.sector){const ln=$("ln-"+x.sector.id);if(ln&&ln.hidden)$("tg-"+x.sector.id).click()}
+    if(el.closest("#meas")){$("meas").open=true;const card=el.closest(".mcard");if(card&&card.hidden){mFilt={o:"all",e:"all"};document.querySelectorAll("#meas .mfilt button").forEach(b=>b.classList.toggle("on",b.dataset.mo==="all"||b.dataset.me==="all"));applyMeasFilter()}}
+    if(x&&x.sector&&!x.sector.hide){const ln=$("ln-"+x.sector.id);if(ln&&ln.hidden)$("tg-"+x.sector.id).click()}
     const c=el.closest(".ctrl")||el;c.scrollIntoView({behavior:"smooth",block:"center"});
     c.style.transition="background .6s";c.style.background="var(--band)";setTimeout(()=>c.style.background="",1600);
   }
