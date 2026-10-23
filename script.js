@@ -983,6 +983,14 @@
      src:"insee_imp"}
    ]}
   ];
+  const AOD={H:{bas:{l:"bas de la fourchette du COR",P:[[0,0],[2,0.05],[10,0.3],[20,0.3]],E:160},mil:{l:"milieu de la fourchette du COR",P:[[0,0],[2,0.225],[10,0.45],[20,0.475]],E:205},haut:{l:"haut de la fourchette du COR",P:[[0,0],[2,0.4],[10,0.6],[20,0.65]],E:250}},
+    h(){const el=document.getElementById("x_aod_h");return AOD.H[el?el.value:"bas"]},
+    one(t,P){if(t<=0)return 0;for(let k=1;k<P.length;k++){if(t<=P[k][0]){const a=P[k-1],b=P[k];return a[1]+(b[1]-a[1])*(t-a[0])/(b[0]-a[0])}}return P[P.length-1][1]},
+    solde(t,v){if(!v)return 0;const P=AOD.h().P;let a=0;for(let j=0;j<Math.ceil(v-1e-9);j++){const w=Math.min(1,v-j);a+=w*AOD.one(t-4*j,P)}return a},
+    emp(v){return v*AOD.h().E},
+    age(v){const y=64+Math.floor(v+1e-9),m=Math.round((v-Math.floor(v+1e-9))*12);return y+" ans"+(m?" et "+m+" mois":"")},
+    dur(v){const y=Math.floor(v+1e-9),m=Math.round((v-y)*12);return (y?y+" an"+(y>1?"s":""):"")+(y&&m?" et ":"")+(m?m+" mois":"")},
+    fin(v){return 2026+Math.ceil(v-1e-9)*4}};
   const SUP={x_popact:{S:[-0.11,-0.07,-0.04,0.01,0.11],Y:[0.04,0.07,0.10,0.23,0.61],P:[-0.09,-0.24,-0.44,-0.81,-1.12]},x_eff:{S:[-0.04,-0.11,-0.09,0.00,0.05],Y:[0.04,0.15,0.27,0.43,0.61],P:[-0.09,-0.28,-0.44,-0.63,-0.89]}};
   const SPECIAL=[
     {id:"x_popact",kind:"spec",gain:1,path:(t,v)=>{let a=0;for(let s0=1;s0<=Math.min(t,5);s0++)a+=v/5*mesAt(SUP.x_popact.S,t-s0+1);return a},label:"Augmenter la population active",min:0,max:5,step:0.5,start:1,
@@ -1021,15 +1029,15 @@
      per:v=>`Gain pour les caisses de retraite : ${sign(1.8*v/100,1)} Md€ par an de 2027 à 2032, puis 0`,
      up:"Départ un à trois trimestres plus tard pour les générations 1964 à 1968.",
      src:"cor26",note:"Coût de la suspension : 1,8 Md€ en moyenne en année pleine jusqu'en 2032 (COR, rapport annuel juin 2026, synthèse p. 7, chiffrage Drees, modèle Trajectoire) ; calendrier par génération : p. 57-58, tableau 1.4. Correction : la version précédente du simulateur reprenait à tort le rendement de la réforme entière (12,9 Md€ en 2030)."},
-    {id:"x_aod",kind:"spec",label:"Reculer l'âge légal d'un an de plus (65 ans)",min:0,max:2,step:1,start:1,
-     path:(t,v)=>{if(!v)return 0;const P=v===1?[[0,0],[2,0.05],[10,0.3],[20,0.3]]:[[0,0],[2,0.4],[10,0.6],[20,0.65]];for(let k=1;k<P.length;k++){if(t<=P[k][0]){const a=P[k-1],b=P[k];return a[1]+(b[1]-a[1])*(t-a[0])/(b[0]-a[0])}}return P[P.length-1][1]},
-     swFn:v=>v===0?0:(v===1?0.3:0.6)*GDP0/100,
-     fmt:v=>v===0?"Non":v===1?"Oui (bas de la fourchette)":"Oui (haut de la fourchette)",
-     help:"Âge d'ouverture des droits porté d'un an au-delà de 64 ans. Le Conseil d'orientation des retraites a fait chiffrer la mesure par trois modèles (DG Trésor, OFCE, I-MIP) ; leurs résultats forment une fourchette. Choisissez le bas (prudent) ou le haut. L'effet sur le solde inclut déjà le surcroît d'emploi et de recettes.",
-     who:"Les actifs qui partiraient un an plus tard ; à court terme, des seniors au chômage ou en invalidité plus longtemps.",
-     per:v=>v===0?"Aucun changement":`Gain pour les comptes publics : ${v===1?"+0,05":"+0,4"} pt de PIB à 2 ans, ${v===1?"+0,3":"+0,6"} pt à 10 ans, ${v===1?"+0,3":"+0,65"} pt à 20 ans ; ${v===1?"+160 000":"+250 000"} emplois à 10 ans`,
-     up:"Un an de travail de plus avant la retraite ; hausse temporaire du chômage des seniors et report vers d'autres dépenses (chômage, invalidité), déjà pris en compte dans les chiffres du COR.",
-     src:"cor26",note:"Tableau « Effets sur le PIB, l'emploi et les finances publiques de différentes mesures de consolidation », rapport annuel du COR juin 2026, synthèse p. 20 : solde primaire +0,05 à +0,4 pt de PIB à 2 ans, +0,3 à +0,6 à 10 ans, +0,3 à +0,65 à 20 ans. Entre ces horizons, le simulateur relie les points en ligne droite. Le gain de PIB (+0,1 à +0,8 %) n'est pas ajouté à la croissance, pour rester prudent."},
+    {id:"x_aod",kind:"spec",label:"Reculer l'âge légal de départ (aujourd'hui 64 ans)",min:0,max:6,step:0.25,start:1,
+     path:(t,v)=>AOD.solde(t,v),
+     swFn:v=>AOD.solde(10,v)*GDP0/100,
+     fmt:v=>v===0?"Non (64 ans)":AOD.age(v)+" (+"+AOD.dur(v)+")",
+     help:"Âge à partir duquel on peut toucher sa retraite, porté au-delà de 64 ans. Le COR a fait chiffrer un an de plus par trois modèles (DG Trésor, OFCE, I-MIP) ; leurs résultats forment une fourchette, à choisir ci-dessous. Aucun chiffrage officiel n'existe au-delà d'un an : le simulateur applique le même effet à chaque année supplémentaire, chacune commençant 4 ans après la précédente, soit le rythme de 3 mois par génération des réformes de 2010 et 2023. L'effet sur le solde inclut déjà le surcroît d'emploi et de recettes.",
+     who:"Les actifs qui partiraient plus tard, en particulier ceux qui ont commencé à travailler tôt ou dont le métier est pénible ; à court terme, des seniors au chômage ou en invalidité plus longtemps.",
+     per:v=>{if(!v)return "Aucun changement";const h=AOD.h(),e=AOD.emp(v);return `Âge légal porté à ${AOD.age(v)}, atteint en ${AOD.fin(v)}. Gain pour les comptes publics : ${sign(AOD.solde(10,v),2)} pt de PIB en 2036, ${sign(AOD.solde(19,v),2)} pt en 2045 (${h.l}) ; environ ${fr(e,0)} 000 emplois de plus quand toutes les hausses sont en place`},
+     up:"Travailler plus longtemps avant la retraite. Hausse temporaire du chômage, des arrêts maladie et de l'invalidité des seniors (environ un tiers des économies reperdues lors de la réforme de 2010, selon une étude publiée par le COR), déjà comprise dans les chiffres du COR pour un an. Au-delà d'un an, l'effet réel est inconnu : plus l'âge monte, plus la part de seniors qui ne peuvent pas travailler augmente, et l'effet par année pourrait être plus faible.",
+     src:"cor26",note:"Un an de plus (rapport annuel du COR juin 2026, synthèse p. 20) : solde primaire +0,05 à +0,4 pt de PIB à 2 ans, +0,3 à +0,6 à 10 ans, +0,3 à +0,65 à 20 ans ; emploi +160 000 à +250 000 à 10 ans. Hypothèse du milieu : moyenne du bas et du haut. Entre ces horizons, ligne droite ; chaque année supplémentaire reprend le même profil, décalé de 4 ans. Le gain de PIB n'est pas ajouté à la croissance, pour rester prudent. Pour comparaison, l'âge légal est de 67 ans en Allemagne (en 2029) et indexé sur l'espérance de vie au Danemark."},
     {id:"x_surtaxe",kind:"spec",label:"Prolonger la surtaxe des grandes entreprises après 2026",min:0,max:100,step:10,amt:7.3,ramp:1,start:1,
      fmt:v=>v===0?"Non":v+" % du niveau 2026",
      help:"Les groupes de plus d'1 Md€ de chiffre d'affaires paient un impôt sur les sociétés majoré, prévu jusqu'en 2026. Le scénario de base suppose qu'il s'arrête.",
@@ -1146,6 +1154,11 @@
       $("x_patri_src").innerHTML="<b>Sources :</b> "+r.src.map(k=>`<a href="${S[k][1]}" target="_blank" rel="noopener">${S[k][0]}</a>`).join(" · ")};
     $("x_patri_ref").addEventListener("change",()=>{upd();render()});upd();
   }
+  {const c=$("x_aod").closest(".ctrl"),d=document.createElement("div");d.style.cssText="display:flex;flex-direction:column;gap:4px;margin-top:4px";
+    d.innerHTML=`<label for="x_aod_h" style="font-size:13px">Hypothèse sur l'effet d'un an de plus</label>
+      <select id="x_aod_h" style="font:inherit;font-size:14px;padding:6px 8px;border:1px solid var(--line);border-radius:6px;background:var(--panel);color:var(--ink);max-width:100%">
+      <option value="bas">Bas de la fourchette du COR (prudent)</option><option value="mil">Milieu de la fourchette</option><option value="haut">Haut de la fourchette du COR</option></select>`;
+    c.insertBefore(d,c.querySelector("small"));$("x_aod_h").addEventListener("change",()=>render());}
   const mac=document.createElement("details");mac.className="panel macro";
   mac.innerHTML=`<summary>Hypothèses économiques</summary>`+MACRO.map(m=>`<div class="ctrl"><div class="top"><label for="${m.id}">${m.label}</label><output id="o-${m.id}"></output></div><input type="range" id="${m.id}" min="${m.min}" max="${m.max}" step="${m.step}" value="${m.def}"><small>${m.help}</small></div>`).join("");
   host.appendChild(mac);
@@ -1306,7 +1319,7 @@
       return `<div class="imp"><span class="pill ${lose?"lose":"win"}">${lose?"Perdants":"Gagnants"}</span><span class="t">${o.x.label} (${fmtV(o.x,o.v)})</span><span class="d">${o.x.per?o.x.per(o.v):o.x.who}</span></div>`}).join("")
       :'<p class="empty">Aucune mesure pour l\'instant. Bougez un curseur pour voir qui gagne et qui perd.</p>';
 
-    document.querySelectorAll("#presets button").forEach(b=>{const pr=PRESETS[b.dataset.p];b.classList.toggle("on",ALL.every(x=>Math.abs((pr[x.id]||0)-p[x.id])<1e-9))});
+    document.querySelectorAll("#presets button").forEach(b=>{const pr=PRESETS[b.dataset.p];b.classList.toggle("on",ALL.every(x=>Math.abs((pr[x.id]||0)-p[x.id])<1e-9)&&(!p.x_aod||$("x_aod_h").value==="bas"))});
     // Fourchette : mêmes choix, sous les différentes hypothèses de modèle
     const combos=[{mes:0,prix:0,rlink:0},{mes:1,prix:0,rlink:0},{mes:1,prix:1,rlink:0},{mes:1,prix:1,rlink:1}];
     const vs=combos.map(c=>simulate(Object.assign({},p,c),false));
@@ -1372,6 +1385,7 @@
     <p><strong>Ce qui est une hypothèse et non un chiffre officiel.</strong> La croissance et l'inflation après 2027 ; le classement de chaque ligne dans une variante officielle (par exemple, les niches fiscales des ménages traitées comme l'impôt sur le revenu, les niches sociales comme les cotisations employeurs, les accises sur l'alcool et la taxe sur les billets d'avion comme la TVA, la redevance poids lourds comme la fiscalité de l'énergie) ; les lignes droites tracées entre les horizons publiés (1, 2, 3, 5 et 10 ans pour Mésange ; 2, 10 et 20 ans pour le COR) et le maintien de la valeur à 10 ans au-delà ; pour les pensions, le milieu de la fourchette de PIB du COR ; l'absence d'effet sur l'activité (réglable) pour les mesures sans variante officielle : impôt sur les sociétés, taxe foncière, successions, IFI, tabac, impôt sur la fortune, fraude, niches des entreprises et « autres niches » ; les variantes Mésange datent de 2017 ; l'évolution des prix à la consommation y sert d'approximation des prix du PIB ; les pensions n'ont pas d'effet sur les prix, le COR ne le chiffrant pas ; l'élasticité des taux à la dette est appliquée au niveau de la dette, alors que la DG Trésor l'estime sur l'écart entre taux et croissance ; l'effet des taux sur l'activité reprend une variante qui porte sur les taux réels de toute l'économie ; l'effet par niveau de vie suppose que chaque ménage voit sa prestation ou son impôt varier du même pourcentage, et traite l'impôt sur le revenu et la CSG ensemble (la Drees ne les sépare pas) ; la répartition régulière, année par année, des effets démographiques projetés à 2070 pour la santé, la dépendance et l'éducation. Les montants moyens par personne sont, pour les prestations sociales, ceux publiés par la Drees (2023) ou la Cnaf (2026) ; pour les autres lignes, des divisions de montants officiels par des effectifs officiels, signalées dans chaque fiche.</p>
     <p><strong>Ce qui n'est pas couvert, faute de chiffrage officiel accessible.</strong> un recul de l'âge de départ de plus d'un an au-delà de 64 ans ; le coût d'un point d'indice de la fonction publique ; les cotisations de retraite encore comprises dans les petites missions de l'État ; les dépenses de l'État non détaillées ici (gestion des finances publiques, administration territoriale, pouvoirs publics…).</p>
     <p><strong>Retraites : correction d'octobre 2026.</strong> Le curseur sur la réforme de 2023 reprenait le rendement de la réforme entière (12,9 Md€ en 2030). Or la loi n'a suspendu la réforme que pour les générations 1964 à 1968 : le COR chiffre le coût de la suspension à 1,8 Md€ par an en moyenne jusqu'en 2032, puis plus rien (rapport annuel juin 2026, p. 7 et 57). Le curseur a été corrigé, et un nouveau curseur chiffre un recul de l'âge légal à 65 ans d'après le même rapport (p. 20).</p>
+    <p><strong>Âge légal au-delà de 65 ans : extrapolation.</strong> Le COR ne chiffre qu'un an de plus (65 ans). Le curseur va jusqu'à 70 ans en appliquant le même effet à chaque année supplémentaire, chacune commençant 4 ans après la précédente (3 mois par génération, comme en 2010 et 2023) : 67 ans sont atteints en 2038. Ce n'est pas un chiffrage officiel. L'effet réel d'une deuxième ou troisième année est probablement plus faible, car la part de seniors en mauvaise santé ou sans emploi augmente avec l'âge. Le choix « bas / milieu / haut » reprend la fourchette des trois modèles utilisés par le COR.</p>
     <p><strong>Octobre 2026 : effets sur l'activité.</strong> Jusqu'ici, la plupart des mesures étaient comptées sans effet sur l'activité. Avec les variantes officielles, un même effort direct améliore beaucoup moins la dette : les scénarios d'exemple ont dû être portés d'environ 140 à 220-270 Md€ d'effort direct par an pour stabiliser la dette, une fois comptés aussi les effets sur les prix et le lien entre dette et taux. Avec le calcul comptable, environ 140 Md€ suffisent.</p>
     <p><strong>Santé.</strong> Les soins de ville sont détaillés sur le champ du régime général (la grande majorité des assurés), avant les remises des laboratoires, d'après les Comptes de la Sécurité sociale d'octobre 2026 ; les hôpitaux et établissements médico-sociaux reprennent l'objectif 2026 voté. Les autres régimes d'assurance maladie et les remises ne sont donc pas inclus dans les lignes de soins de ville.</p>
     <p><strong>Leviers de croissance.</strong> Deux curseurs reprennent les variantes « structurelles » du modèle Mésange : une hausse de la population active et une hausse de l'efficacité du travail, chacune atteinte progressivement en 5 ans. Ils augmentent le PIB en volume (+0,61 % à 10 ans pour 1 %) mais améliorent peu le solde public, car l'économie met plusieurs années à absorber le choc. Ils font aussi baisser les prix (environ −0,9 à −1,1 % à 10 ans), ce qui réduit la valeur en euros du PIB : avec les effets sur les prix activés, leur gain sur le ratio de dette est donc faible. D'autres curseurs soutiennent aussi la croissance : le recul de l'âge de départ (COR), une hausse de l'investissement public ou une baisse des cotisations patronales, mais ces deux derniers coûtent de l'argent.</p>
@@ -1390,7 +1404,7 @@
      what:"Relèvement progressif, génération par génération, de l'âge à partir duquel on peut toucher sa retraite, et en 2023 accélération de la hausse de la durée de cotisation.",
      num:"Selon le COR (2026), un an de plus d'âge légal améliore le solde public de 0,3 à 0,6 point de PIB au bout de 10 ans, effets sur l'emploi compris, et crée 160 000 à 250 000 emplois. La réforme de 2023 devait améliorer le solde des retraites de 12,9 Md€ en 2030 (Sénat).",
      res:"Pour la réforme de 2010, une étude publiée par le COR (2016) trouve une hausse de 14 points du taux d'emploi à 60 ans ; mais environ un tiers des économies est reperdu en chômage, arrêts maladie et invalidité supplémentaires.",
-     sim:"Curseur « Reculer l'âge légal d'un an de plus (65 ans) ».",act:[{l:"Appliquer : âge légal à 65 ans",set:{x_aod:1}}],see:"x_aod",src:["cor26","cor_2010","senat_375"]},
+     sim:"Curseur « Reculer l'âge légal de départ », de 64 à 70 ans par pas de 3 mois.",act:[{l:"Appliquer : 65 ans",set:{x_aod:1}},{l:"Appliquer : 67 ans",set:{x_aod:3}}],see:"x_aod",src:["cor26","cor_2010","senat_375"]},
     {id:"cice",o:"fr",fx:["croissance"],t:"Baisser le coût du travail : du CICE aux allègements de cotisations",w:"France, depuis 2013",
      k:"Un crédit d'impôt proportionnel aux salaires jusqu'à 2,5 Smic, transformé en 2019 en baisse permanente des cotisations patronales.",
      who:"<b>Création</b> : gouvernement Ayrault, présidence Hollande, PS (gauche, social-démocrate), après le rapport Gallois sur la compétitivité (2012). <b>Transformation en allègements</b> : gouvernement Philippe, présidence Macron, LREM (centre), en 2019.",
@@ -1482,14 +1496,14 @@
      what:"Hausse d'un mois par an puis de deux mois par an de l'âge légal, à partir de la génération 1947 ; 67 ans pour les personnes nées à partir de 1964.",
      num:"Objectif inscrit dans le projet de loi : limiter le taux de cotisation retraite à 21,9 % en 2030 et maintenir un taux de remplacement d'au moins 43 %.",
      res:"Mise en œuvre sans retour en arrière ; un départ à 63 ans sans décote a toutefois été ouvert en 2014 pour les longues carrières.",
-     sim:"Curseur « Reculer l'âge légal d'un an de plus (65 ans) », qui transpose un an de plus en France d'après le COR.",act:[{l:"Appliquer : un an de plus en France",set:{x_aod:1}}],see:"x_aod",src:["de_rente67","cor26"]},
+     sim:"Curseur « Reculer l'âge légal de départ ». L'équivalent allemand serait 67 ans en France, soit 3 ans de plus qu'aujourd'hui ; le simulateur applique 3 fois l'effet d'un an chiffré par le COR, chaque année commençant 4 ans après la précédente (67 ans atteints en 2038).",act:[{l:"Appliquer : 67 ans en France",set:{x_aod:3}}],see:"x_aod",src:["de_rente67","cor26"]},
     {id:"danemark",o:"et",fx:["croissance","economies"],t:"Indexer l'âge de départ sur l'espérance de vie",w:"Danemark, depuis 2006",
      k:"L'âge de départ suit automatiquement les gains d'espérance de vie, sans nouvelle loi à chaque fois.",
      who:"Accord sur la protection sociale de 2006 : gouvernement Fogh Rasmussen, Venstre (libéraux, centre-droit) et Conservateurs (droite), avec les sociaux-démocrates (centre-gauche), le Parti populaire danois (droite nationaliste) et les sociaux-libéraux (centre).",
      what:"L'âge légal monte d'au plus un an tous les cinq ans pour garder constante la durée moyenne de retraite.",
      num:"Âge légal porté de 65 à 67 ans, projeté à 73 ans vers 2060, le plus élevé prévu dans l'OCDE. Sans cette indexation après 2030, l'OCDE projette des déficits durables.",
      res:"Le taux d'emploi des 55-64 ans a nettement augmenté depuis 2014, tout en restant derrière la Norvège et la Suède.",
-     sim:"Curseur « Reculer l'âge légal d'un an de plus (65 ans) ».",act:[],see:"x_aod",src:["oecd_dk"]},
+     sim:"Curseur « Reculer l'âge légal de départ ». Le simulateur ne sait pas indexer l'âge sur l'espérance de vie ; à titre d'ordre de grandeur, le Danemark passe de 65 à 67 ans.",act:[{l:"Appliquer : 67 ans en France",set:{x_aod:3}}],see:"x_aod",src:["oecd_dk"]},
     {id:"efact",o:"et",fx:["recettes"],t:"Rendre la facture électronique obligatoire",w:"Italie, 2019",
      k:"Toutes les factures entre entreprises passent par une plateforme publique, ce qui complique la fraude à la TVA.",
      who:"Loi de budget pour 2018, gouvernement Gentiloni, Parti démocrate (centre-gauche) ; entrée en vigueur en janvier 2019 sous le gouvernement Conte I, Mouvement 5 étoiles (populiste) et Ligue (droite nationaliste).",
@@ -1600,7 +1614,7 @@
   paintMeas();
 
   ALL.concat(MACRO).forEach(x=>$(x.id).addEventListener("input",()=>render()));
-  function setPreset(k){const pr=PRESETS[k];ALL.forEach(x=>$(x.id).value=pr[x.id]||0);render()}
+  function setPreset(k){const pr=PRESETS[k];ALL.forEach(x=>$(x.id).value=pr[x.id]||0);$("x_aod_h").value="bas";render()}
   $("presets").addEventListener("click",e=>{const b=e.target.closest("button");if(b)setPreset(b.dataset.p)});
   window.__sim={simulate,SECTORS,SPECIAL,ALL,MACRO,PRESETS,sw,GDP0};
   render();
