@@ -27,13 +27,18 @@
   <header>
     <h1>Simulateur de dette publique française</h1>
     <p>Le budget de la France ligne par ligne, avec les montants officiels et leurs sources. Testez vos choix et voyez leur effet sur la dette jusqu'en 2045, et qui y gagne ou y perd.</p>
-    <ol class="steps">
+    <ol class="steps" id="steps">
       <li><b>Choisissez un point de départ</b>la législation actuelle, ou un des trois paquets de mesures tout faits.</li>
       <li><b>Bougez les curseurs</b>vers la gauche on baisse une dépense ou une niche, vers la droite on augmente un impôt. En vert : gain pour les comptes publics ; en rouge : coût.</li>
       <li><b>Lisez le résultat</b>la barre du haut reste visible : dette en 2045, déficit et effort restant pour stabiliser la dette.</li>
     </ol>
   </header>
 
+  <nav class="tabs" role="tablist" aria-label="Vues">
+    <button type="button" role="tab" id="tb-sim" aria-selected="true" class="on" data-tab="sim">Simulateur</button>
+    <button type="button" role="tab" id="tb-prog" aria-selected="false" data-tab="prog">Programmes présidentielle 2027</button>
+  </nav>
+  <div id="tab-sim" style="display:flex;flex-direction:column;gap:20px">
   <details class="panel lexique">
     <summary>Les mots à connaître</summary>
     <dl class="lex">
@@ -67,7 +72,7 @@
   </div>
 
   <details class="panel meas" id="meas">
-    <summary><span class="ms-t">Mesures éprouvées en France et à l'étranger</span><span class="ms-s">23 mesures appliquées et chiffrées : ce qu'elles ont rapporté ou coûté, qui les a portées, et comment les tester ici</span></summary>
+    <summary><span class="ms-t">Mesures éprouvées en France et à l'étranger</span><span class="ms-s">24 mesures chiffrées, appliquées ou en projet : ce qu'elles ont rapporté ou coûté, qui les a portées, et comment les tester ici</span></summary>
     <p class="sintro">Chaque fiche décrit une mesure réellement appliquée, avec son chiffrage officiel, ses résultats observés et ses limites. Elle indique le gouvernement et les partis qui l'ont portée, avec leur orientation telle qu'on la décrit couramment. Quand le simulateur a un curseur correspondant, un bouton l'applique à vos réglages. Les mesures étrangères sont transposées en part de PIB et ne prédisent pas ce qui se passerait en France.</p>
     <div class="mfilt" role="group" aria-label="Filtrer par origine"><span>Origine</span><button type="button" data-mo="all" class="on">Toutes</button><button type="button" data-mo="fr">France</button><button type="button" data-mo="et">Étranger</button></div>
     <div class="mfilt" role="group" aria-label="Filtrer par effet"><span>Effet</span><button type="button" data-me="all" class="on">Tous</button><button type="button" data-me="croissance">Croissance et emploi</button><button type="button" data-me="recettes">Recettes</button><button type="button" data-me="economies">Économies</button><button type="button" data-me="contre">Contre-exemples</button></div>
@@ -119,6 +124,8 @@
   </div>
 
   <div class="notes" id="notes"></div>
+  </div>
+  <div id="tab-prog" hidden style="flex-direction:column;gap:20px"></div>
 </div>
 <script src="script.js"></script>
 </body>
