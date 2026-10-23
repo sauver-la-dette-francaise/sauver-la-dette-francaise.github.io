@@ -1117,7 +1117,7 @@
   const srcHtml=(k,note)=>`<div class="src"><b>Source</b><a href="${S[k][1]}" target="_blank" rel="noopener">${S[k][0]}</a>${note?". "+note:""}</div>`;
   const ctrlHtml=(x,s)=>`<div class="ctrl"><div class="top"><label for="${x.id}">${x.label}</label><output id="o-${x.id}"></output></div>
       ${x.amt&&s?`<span class="amt">${fr(x.amt,x.amt<10?2:1)} Md€ (${x.yr})</span>`:""}
-      <input type="range" id="${x.id}" min="${s?s.min:x.min}" max="${s?s.max:x.max}" step="${s?s.step:x.step}" value="0">
+      <input type="range" id="${x.id}" min="${s?s.min:x.min}" max="${s?s.max:x.max}" step="${s?s.step:x.step}" value="0">${s?scaleHtml(s.min,s.max," %"):""}
       <small>${x.help}</small>
       <div class="effect" id="e-${x.id}"></div>
       <details class="more"><summary>Détails et source</summary><div class="fiche">
@@ -1125,23 +1125,32 @@
         ${x.down?`<div><b>Si on baisse</b>${x.down}</div>`:""}
         ${x.up?`<div><b>Si on augmente</b>${x.up}</div>`:""}
         ${srcHtml(x.src,x.note)}</div></details></div>`;
+  const GRP={dep:["Dépenses publiques","Vers la gauche : moins de dépense, donc une économie (en vert). Vers la droite : plus de dépense (en rouge)."],
+    niche:["Aides aux entreprises et niches","Vers la gauche : réduire l'avantage, donc une recette pour l'État. Vers la droite : l'élargir, ce qui coûte."],
+    rec:["Impôts et lutte contre la fraude","Vers la droite : plus de recettes. Vers la gauche : baisse d'impôt, qui coûte."]};
+  const scaleHtml=(mn,mx,u)=>{if(!(mn<0&&mx>0))return "";const z=-mn/(mx-mn)*100;return `<div class="scale" aria-hidden="true"><span class="l">${fr(mn,0)}${u}</span><span class="z" style="left:calc(8px + (100% - 16px) * ${z.toFixed(2)} / 100)">0</span><span class="r">+${fr(mx,0)}${u}</span></div>`};
+  {const nav=document.createElement("nav");nav.className="jump";nav.setAttribute("aria-label","Aller à");
+    nav.innerHTML=`<a href="#g-dep">Dépenses</a><a href="#g-niche">Aides et niches</a><a href="#g-rec">Impôts</a><a href="#g-spec">Autres leviers</a><a href="#g-hyp">Hypothèses</a>`;host.appendChild(nav);}
+  const seen={};
   SECTORS.forEach((s,k)=>{
     if(s.hide)return;
+    if(!seen[s.kind]){seen[s.kind]=1;const g=document.createElement("div");g.className="ghead";g.id="g-"+s.kind;g.innerHTML=`<h2>${GRP[s.kind][0]}</h2><p>${GRP[s.kind][1]}</p>`;host.appendChild(g);}
     const sec=document.createElement("section");sec.className="panel";
     sec.innerHTML=`<div class="shead"><h3>${s.name}</h3><span class="tot zero" id="t-${s.id}"></span></div><span class="sbase">${s.base}</span>
-      <div class="master"><div class="top"><label for="m-${s.id}">Curseur général</label><output id="mo-${s.id}"></output></div>
-        <input type="range" id="m-${s.id}" min="${s.min}" max="${s.max}" step="${s.step}" value="0">
+      <div class="master"><div class="top"><label for="m-${s.id}">Tout le secteur</label><output id="mo-${s.id}"></output></div>
+        <input type="range" id="m-${s.id}" min="${s.min}" max="${s.max}" step="${s.step}" value="0">${scaleHtml(s.min,s.max," %")}
         <small id="mt-${s.id}"></small><small id="mp-${s.id}"></small></div>
-      <div class="sactions"><button type="button" class="linkbtn" id="tg-${s.id}" aria-expanded="false" aria-controls="ln-${s.id}">Voir les ${s.lines.length} sous-catégories</button>
+      <div class="sactions"><button type="button" class="linkbtn" id="tg-${s.id}" aria-expanded="false" aria-controls="ln-${s.id}">Régler les ${s.lines.length} sous-catégories une par une</button>
         <button type="button" class="linkbtn sub" data-reset="${s.id}">Remettre à zéro</button></div>
       <div id="ln-${s.id}" hidden><p class="sintro">${s.intro}</p><div class="lines">${s.lines.map(x=>ctrlHtml(x,s)).join("")}</div></div>`;
     host.appendChild(sec);
     const tg=$("tg-"+s.id);
-    tg.addEventListener("click",()=>{const el=$("ln-"+s.id),open=el.hidden;el.hidden=!open;tg.setAttribute("aria-expanded",String(open));tg.textContent=open?"Replier les sous-catégories":`Voir les ${s.lines.length} sous-catégories`});
+    tg.addEventListener("click",()=>{const el=$("ln-"+s.id),open=el.hidden;el.hidden=!open;tg.setAttribute("aria-expanded",String(open));tg.textContent=open?"Replier les sous-catégories":`Régler les ${s.lines.length} sous-catégories une par une`});
   });
+  {const g=document.createElement("div");g.className="ghead";g.id="g-spec";g.innerHTML=`<h2>Autres leviers</h2><p>Âge de départ, croissance, ventes d'actifs, nouveaux impôts : des mesures qui ne se résument pas à un pourcentage d'une ligne du budget.</p>`;host.appendChild(g);}
   const sp=document.createElement("section");sp.className="panel";
-  sp.innerHTML=`<h2>Mesures spécifiques</h2>`+SPECIAL.map(x=>ctrlHtml(x,null)).join("");
-  host.appendChild(sp);
+  sp.innerHTML=SPECIAL.map(x=>ctrlHtml(x,null)).join("");
+  host.appendChild(sp);sp.querySelector(".ctrl").style.borderTop="0";sp.querySelector(".ctrl").style.paddingTop="0";
   { // sélecteur du modèle de référence pour l'impôt sur la fortune
     const ctrl=$("x_patri").closest(".ctrl");
     const sel=document.createElement("div");sel.className="ctrl";sel.style.borderTop="0";sel.style.paddingTop="0";
@@ -1159,6 +1168,7 @@
       <select id="x_aod_h" style="font:inherit;font-size:14px;padding:6px 8px;border:1px solid var(--line);border-radius:6px;background:var(--panel);color:var(--ink);max-width:100%">
       <option value="bas">Bas de la fourchette du COR (prudent)</option><option value="mil">Milieu de la fourchette</option><option value="haut">Haut de la fourchette du COR</option></select>`;
     c.insertBefore(d,c.querySelector("small"));$("x_aod_h").addEventListener("change",()=>render());}
+  {const g=document.createElement("div");g.className="ghead";g.id="g-hyp";g.innerHTML=`<h2>Hypothèses</h2><p>Croissance, inflation, taux d'intérêt et effets sur l'activité. Les valeurs par défaut sont celles des prévisions officielles.</p>`;host.appendChild(g);}
   const mac=document.createElement("details");mac.className="panel macro";
   mac.innerHTML=`<summary>Hypothèses économiques</summary>`+MACRO.map(m=>`<div class="ctrl"><div class="top"><label for="${m.id}">${m.label}</label><output id="o-${m.id}"></output></div><input type="range" id="${m.id}" min="${m.min}" max="${m.max}" step="${m.step}" value="${m.def}"><small>${m.help}</small></div>`).join("");
   host.appendChild(mac);
@@ -1279,7 +1289,7 @@
       if(fromMaster!==s.id)$("m-"+s.id).value=clamp(snap(avg,s.step),s.min,s.max);
       $("mo-"+s.id).textContent=z?"0 %":P(Math.round(avg*10)/10);
       const e=$("t-"+s.id);e.textContent=Math.abs(t)<0.005?"0 Md€":(t>0?"+":"−")+fr(Math.abs(t),1)+" Md€";e.className="tot "+(t>0.005?"pos":t<-0.005?"neg":"zero");
-      $("mt-"+s.id).textContent=z?"Fait varier toutes les sous-catégories ensemble. Dépliez le secteur pour les régler une par une.":s.tr(avg);
+      $("mt-"+s.id).textContent=z?"":s.tr(avg);$("mo-"+s.id).style.color=t>0.005?"var(--good)":t<-0.005?"var(--warn)":"";
       $("mp-"+s.id).textContent=z?"":(s.per?s.per(avg,s.total):`Par habitant : ${sign(s.total*1000/POP*avg/100,0)} € par an de dépense publique`);
     });
     MACRO.forEach(m=>$("o-"+m.id).textContent=m.fmt(p[m.id]));
@@ -1312,6 +1322,14 @@
     const gL=((1+p.gr/100)*(1+p.inf/100)-1)*100;
     const pbStar=r33.d*(p.rate-gL)/(100+gL),gap=(pbStar-r33.pb)*k;
     $("need").innerHTML=`Solde primaire qui stabilise la dette à son niveau de 2033 avec ces hypothèses : <strong>${sign(pbStar)} %</strong> du PIB. `+(gap>1?`Il manque environ <strong>${fr(gap,0)} Md€</strong> par an en 2033.`:`Objectif atteint en 2033, avec une marge d'environ ${fr(-gap,0)} Md€.`);
+    {const sq45=sq[sq.length-1].d,d30=at(s,2030).def,sq30=at(sq,2030).def;
+      $("sb45").textContent=fr(last.d)+" %";$("sbtr").innerHTML=$("ktrend").innerHTML;
+      $("sb45s").textContent=Math.abs(last.d-sq45)<0.05?"aucune mesure pour l'instant":`législation actuelle : ${fr(sq45,0)} %`;
+      $("sbdef").textContent=fr(d30)+" % du PIB";$("sbdef").style.color=d30<=3?"var(--good)":"";
+      $("sbdefs").textContent=d30<=3?"sous la limite européenne de 3 %":`limite européenne : 3 % (législation actuelle : ${fr(sq30)} %)`;
+      const sq33=at(sq,2033),imp=(r33.pb-sq33.pb)*k,pct=gap<=1?100:Math.max(0,Math.min(100,imp/(imp+gap)*100));
+      $("sbpi").style.width=pct+"%";$("sbpg").setAttribute("aria-valuenow",Math.round(pct));
+      $("sbgoal").innerHTML=gap>1?`Il manque environ <strong>${fr(gap,0)} Md€</strong> par an en 2033`+(imp>1?`<span class="hm"> (vos mesures : ${sign(imp,0)} Md€)</span>`:""):`Objectif atteint en 2033 : la dette ne monte plus`;}
 
     // Personnes concernées
     const moved=ALL.filter(x=>Math.abs(p[x.id])>1e-9).map(x=>({x,v:p[x.id],md:sw(x,p[x.id])})).sort((a,b)=>Math.abs(b.md)-Math.abs(a.md));
@@ -1378,12 +1396,12 @@
 
   // Notes et sources
   const used=Object.keys(S);
-  $("notes").innerHTML=`
+  $("notes").innerHTML=`<details class="panel notesbox"><summary>Méthode, hypothèses et limites</summary>
     <p><strong>Comment c'est calculé.</strong> Chaque ligne part de son montant officiel. Le curseur fait varier ce montant en % ; l'effet direct sur le solde est ce pourcentage appliqué au montant. S'y ajoute l'effet de la mesure sur l'activité, repris des variantes officielles : modèle Mésange de la DG Trésor (Cahiers n° 2017-04, p. 102 à 120) pour la dépense publique, l'investissement public, les cotisations employeurs, la TVA, la CSG, l'impôt sur le revenu et la fiscalité de l'énergie ; COR (rapport 2026, p. 20) pour les pensions et l'âge de départ. Pour chaque type de mesure, ces variantes donnent l'amélioration réelle du solde et l'écart de PIB à 1, 2, 3, 5 et 10 ans pour 1 point de PIB d'effort ; le simulateur les applique à chaque hausse de l'effort, année après année. Résultat : il faut un effort direct nettement plus grand que le déficit à combler, car une partie de l'économie est reperdue en activité. Ces variantes donnent aussi l'effet sur les prix, compté car la dette se mesure en euros. Enfin, le taux des nouveaux emprunts monte de 0,02 point par point de dette au-dessus de son niveau de fin 2025 (DG Trésor, Trésor-Éco n° 334, 2023), et un taux plus élevé freine l'activité (variante « taux d'intérêt » de Mésange, p. 133). Chacun de ces trois mécanismes peut être désactivé dans les hypothèses économiques ; la zone colorée du graphique montre l'écart entre le calcul comptable et le calcul complet. Les montants sont convertis en points de PIB avec le PIB 2026 (environ 3 068 Md€ : PIB 2025 de l'Insee, augmenté de la croissance et de l'inflation prévues par le RESF 2027). Ils restent ceux de l'année indiquée, sans actualisation. Chaque mesure monte en charge progressivement à partir de 2027, puis reste constante en part du PIB.</p>
     <p><strong>Scénario de base (« législation actuelle »).</strong> Déficit 2026 calé sur la prévision officielle de 5,4 % du PIB (projet de loi de finances 2027). Ensuite, sans nouvelle mesure : hausse des crédits des armées prévue par la programmation militaire actualisée (57,1 Md€ en 2026, 76,3 Md€ en 2030, hors pensions), fin de la surtaxe des grandes entreprises prévue par la loi (environ 7,3 Md€ en 2026), poids des retraites selon le COR (14,1 % du PIB en 2030, 14,2 % en 2045), effets démographiques sur la santé (+0,3 point de PIB d'ici 2070), la dépendance (+0,7 point) et l'éducation (−0,9 point) selon le rapport européen sur le vieillissement cité par la Cour des comptes (décembre 2025). Les mesures du projet de budget 2027 (environ 54 Md€ d'effort annoncé) ne sont pas incluses : c'est à vous de choisir les vôtres.</p>
     <p><strong>Dette et intérêts.</strong> Dette de 115,7 % du PIB fin 2025 (Insee). Chaque année, une fraction 1/maturité de la dette est refinancée au taux choisi ; le taux moyen de départ est déduit des intérêts 2025 (64,7 Md€, Insee).</p>
     <p><strong>Ce qui est une hypothèse et non un chiffre officiel.</strong> La croissance et l'inflation après 2027 ; le classement de chaque ligne dans une variante officielle (par exemple, les niches fiscales des ménages traitées comme l'impôt sur le revenu, les niches sociales comme les cotisations employeurs, les accises sur l'alcool et la taxe sur les billets d'avion comme la TVA, la redevance poids lourds comme la fiscalité de l'énergie) ; les lignes droites tracées entre les horizons publiés (1, 2, 3, 5 et 10 ans pour Mésange ; 2, 10 et 20 ans pour le COR) et le maintien de la valeur à 10 ans au-delà ; pour les pensions, le milieu de la fourchette de PIB du COR ; l'absence d'effet sur l'activité (réglable) pour les mesures sans variante officielle : impôt sur les sociétés, taxe foncière, successions, IFI, tabac, impôt sur la fortune, fraude, niches des entreprises et « autres niches » ; les variantes Mésange datent de 2017 ; l'évolution des prix à la consommation y sert d'approximation des prix du PIB ; les pensions n'ont pas d'effet sur les prix, le COR ne le chiffrant pas ; l'élasticité des taux à la dette est appliquée au niveau de la dette, alors que la DG Trésor l'estime sur l'écart entre taux et croissance ; l'effet des taux sur l'activité reprend une variante qui porte sur les taux réels de toute l'économie ; l'effet par niveau de vie suppose que chaque ménage voit sa prestation ou son impôt varier du même pourcentage, et traite l'impôt sur le revenu et la CSG ensemble (la Drees ne les sépare pas) ; la répartition régulière, année par année, des effets démographiques projetés à 2070 pour la santé, la dépendance et l'éducation. Les montants moyens par personne sont, pour les prestations sociales, ceux publiés par la Drees (2023) ou la Cnaf (2026) ; pour les autres lignes, des divisions de montants officiels par des effectifs officiels, signalées dans chaque fiche.</p>
-    <p><strong>Ce qui n'est pas couvert, faute de chiffrage officiel accessible.</strong> un recul de l'âge de départ de plus d'un an au-delà de 64 ans ; le coût d'un point d'indice de la fonction publique ; les cotisations de retraite encore comprises dans les petites missions de l'État ; les dépenses de l'État non détaillées ici (gestion des finances publiques, administration territoriale, pouvoirs publics…).</p>
+    <p><strong>Ce qui n'est pas couvert, faute de chiffrage officiel accessible.</strong> Le coût d'un point d'indice de la fonction publique ; les cotisations de retraite encore comprises dans les petites missions de l'État ; les dépenses de l'État non détaillées ici (gestion des finances publiques, administration territoriale, pouvoirs publics…).</p>
     <p><strong>Retraites : correction d'octobre 2026.</strong> Le curseur sur la réforme de 2023 reprenait le rendement de la réforme entière (12,9 Md€ en 2030). Or la loi n'a suspendu la réforme que pour les générations 1964 à 1968 : le COR chiffre le coût de la suspension à 1,8 Md€ par an en moyenne jusqu'en 2032, puis plus rien (rapport annuel juin 2026, p. 7 et 57). Le curseur a été corrigé, et un nouveau curseur chiffre un recul de l'âge légal à 65 ans d'après le même rapport (p. 20).</p>
     <p><strong>Âge légal au-delà de 65 ans : extrapolation.</strong> Le COR ne chiffre qu'un an de plus (65 ans). Le curseur va jusqu'à 70 ans en appliquant le même effet à chaque année supplémentaire, chacune commençant 4 ans après la précédente (3 mois par génération, comme en 2010 et 2023) : 67 ans sont atteints en 2038. Ce n'est pas un chiffrage officiel. L'effet réel d'une deuxième ou troisième année est probablement plus faible, car la part de seniors en mauvaise santé ou sans emploi augmente avec l'âge. Le choix « bas / milieu / haut » reprend la fourchette des trois modèles utilisés par le COR.</p>
     <p><strong>Octobre 2026 : effets sur l'activité.</strong> Jusqu'ici, la plupart des mesures étaient comptées sans effet sur l'activité. Avec les variantes officielles, un même effort direct améliore beaucoup moins la dette : les scénarios d'exemple ont dû être portés d'environ 140 à 220-270 Md€ d'effort direct par an pour stabiliser la dette, une fois comptés aussi les effets sur les prix et le lien entre dette et taux. Avec le calcul comptable, environ 140 Md€ suffisent.</p>
@@ -1393,7 +1411,7 @@
     <p><strong>Impôt sur la fortune.</strong> Aucune administration française n'a publié de chiffrage d'un impôt sur les très hauts patrimoines. Le curseur reprend donc le rendement, en part du PIB, des impôts sur la fortune existant en Espagne, en Norvège et en Suisse (sources officielles nationales), ou de l'ancien ISF français, et l'applique au PIB français. C'est une transposition, pas une prévision : le rendement réel dépendrait du seuil, du taux, des exonérations et des comportements en France.</p>
     <p><strong>Vérification d'octobre 2026.</strong> Chaque montant a été recoupé avec le document source (loi de finances, comptes de la Sécurité sociale, Cnaf, Drees, Voies et moyens, annexes du budget de la Sécurité sociale, COR, Cour des comptes, Insee, Sénat). Corrections faites : cotisations de retraite retirées de la ligne police et gendarmerie (−8,2 Md€), minimum vieillesse aligné sur la Drees (4,1 Md€), montant des remises des laboratoires, coût de la suspension de la réforme 2023. Pour les niches fiscales, la fiche indique la fiabilité donnée par l'administration : quatre ne sont connues qu'en « ordre de grandeur ». Limite restante : les autres missions de l'État (action extérieure, écologie, agriculture, culture…) comprennent encore les cotisations de retraite de leurs agents, faute de montant publié pour chacune ; l'économie y est donc un peu surestimée.</p>
     <p><strong>Années et périmètres.</strong> Les crédits des missions de l'État sont ceux votés par la loi de finances du 19 février 2026 (état B). Ils comprennent les cotisations de retraite des agents ; pour l'école, la justice et les armées, celles-ci sont retirées à l'aide des montants publiés par le Sénat, pour ne pas les compter deux fois avec les retraites. Le détail de certaines lignes (prime d'activité, aide aux apprentis, allocations de solidarité) vient du projet de loi, la loi n'étant votée que par programme. Les pensions par régime sont les montants 2023 publiés par la Drees, arrondis au milliard ; la retraite du combattant et les autres pensions versées par l'État au titre de l'intervention sociale (1 Md€) n'ont pas de curseur.</p>
-    <p><strong>Sources.</strong></p><ul>${used.map(k=>`<li><a href="${S[k][1]}" target="_blank" rel="noopener">${S[k][0]}</a></li>`).join("")}</ul>`;
+    </details><details class="panel notesbox" style="margin-top:12px"><summary>Toutes les sources (${used.length} documents)</summary><ul>${used.map(k=>`<li><a href="${S[k][1]}" target="_blank" rel="noopener">${S[k][0]}</a></li>`).join("")}</ul></details>`;
 
 
   // ---------- Mesures éprouvées ----------
@@ -1617,5 +1635,17 @@
   function setPreset(k){const pr=PRESETS[k];ALL.forEach(x=>$(x.id).value=pr[x.id]||0);$("x_aod_h").value="bas";render()}
   $("presets").addEventListener("click",e=>{const b=e.target.closest("button");if(b)setPreset(b.dataset.p)});
   window.__sim={simulate,SECTORS,SPECIAL,ALL,MACRO,PRESETS,sw,GDP0};
+  $("sbreset").addEventListener("click",()=>{MACRO.forEach(m=>$(m.id).value=m.def);setPreset("sq")});
+  { // lien partageable (site web uniquement : dans une page intégrée, l'adresse n'est pas celle du navigateur)
+    const SEL=["x_aod_h","x_patri_ref"],DEF={x_aod_h:"bas",x_patri_ref:$("x_patri_ref").value};const MDEF={};MACRO.forEach(m=>MDEF[m.id]=+$(m.id).value);
+    let inFrame=true;try{inFrame=window.self!==window.top}catch(e){}
+    try{const h=decodeURIComponent(location.hash.slice(1));if(h)h.split("&").forEach(kv=>{const [k,v]=kv.split("=");const el=$(k);if(!el||v===undefined)return;
+      if(SEL.includes(k)){if([...el.options].some(o=>o.value===v)){el.value=v;el.dispatchEvent(new Event("change"))}}else if(isFinite(+v))el.value=v})}catch(e){}
+    const enc=()=>{const a=[];ALL.forEach(x=>{const v=+$(x.id).value;if(v)a.push(x.id+"="+v)});MACRO.forEach(m=>{const v=+$(m.id).value;if(Math.abs(v-MDEF[m.id])>1e-9)a.push(m.id+"="+v)});SEL.forEach(k=>{if($(k).value!==DEF[k])a.push(k+"="+$(k).value)});return a.join("&")};
+    let tmr;document.addEventListener("input",()=>{clearTimeout(tmr);tmr=setTimeout(upd,300)});document.addEventListener("click",()=>{clearTimeout(tmr);tmr=setTimeout(upd,300)});document.addEventListener("change",()=>{clearTimeout(tmr);tmr=setTimeout(upd,300)});
+    function upd(){if(inFrame)return;try{const h=enc();history.replaceState(null,"",h?"#"+h:location.pathname+location.search)}catch(e){}}
+    if(!inFrame){$("sharebox").hidden=false;$("share").addEventListener("click",async()=>{upd();try{await navigator.clipboard.writeText(location.href);$("sharemsg").textContent="Lien copié : il rouvre le simulateur avec vos réglages."}catch(e){$("sharemsg").textContent="Copiez l'adresse de la page : elle contient vos réglages."}})}
+  }
+  {const sb=$("sbar"),set=()=>document.documentElement.style.setProperty("--sbh",(sb.offsetHeight+16)+"px");set();try{new ResizeObserver(set).observe(sb)}catch(e){}}
   render();
 })();
